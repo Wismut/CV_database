@@ -1,5 +1,7 @@
 package main;
 
+import ru.javawebinar.webapp.model.Contact;
+import ru.javawebinar.webapp.model.ContactType;
 import ru.javawebinar.webapp.model.Link;
 
 public class Main {
@@ -16,6 +18,12 @@ public class Main {
 		integer = 7;
 		integer.intValue();
 		printInt(integer);
+
+		Contact c = new Contact(ContactType.PHONE, "12345");
+		ContactType c2 = ContactType.ICQ;
+
+//		System.out.println(c2 == ContactType.PHONE);
+
 	}
 
 //	private static void printInt(Number i) {
