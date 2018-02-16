@@ -1,5 +1,7 @@
 package ru.javawebinar.webapp.model;
 
-public class Organization {
+import java.util.List;
 
+public class Organization {
+	List<OrganizationPeriod> periods;
 }
