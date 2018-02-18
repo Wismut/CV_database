@@ -1,4 +1,7 @@
 package ru.javawebinar.webapp.model;
 
-public class OrganizationSection {
+import java.util.List;
+
+public class OrganizationSection extends Section {
+	private List<Organization> values;
 }
