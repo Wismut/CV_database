@@ -1,8 +1,6 @@
 package main;
 
-import ru.javawebinar.webapp.model.Contact;
-import ru.javawebinar.webapp.model.ContactType;
-import ru.javawebinar.webapp.model.Link;
+import ru.javawebinar.webapp.model.*;
 
 public class Main {
 

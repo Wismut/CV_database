@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc817d7c-217d-4ce5-baf1-ab7d74a99e82" name="Default" comment="">
+    <list default="true" id="bc817d7c-217d-4ce5-baf1-ab7d74a99e82" name="Default" comment="update SectionType">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Organization.java" afterPath="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Organization.java" />
-      <change beforePath="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/OrganizationSection.java" afterPath="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/OrganizationSection.java" />
-      <change beforePath="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/TextSection.java" afterPath="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/TextSection.java" />
+      <change beforePath="$PROJECT_DIR$/out/production/webapp5/main/Main.class" afterPath="$PROJECT_DIR$/out/production/webapp5/main/Main.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/webapp5/ru/javawebinar/webapp/model/ContactType.class" afterPath="$PROJECT_DIR$/out/production/webapp5/ru/javawebinar/webapp/model/ContactType.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/webapp5/ru/javawebinar/webapp/model/Organization.class" afterPath="$PROJECT_DIR$/out/production/webapp5/ru/javawebinar/webapp/model/Organization.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/webapp5/ru/javawebinar/webapp/model/Section.class" afterPath="$PROJECT_DIR$/out/production/webapp5/ru/javawebinar/webapp/model/Section.class" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" afterPath="$PROJECT_DIR$/src/main/Main.java" />
+      <change beforePath="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/SectionType.java" afterPath="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/SectionType.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,15 +20,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="189">
+              <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#798#799#0" expanded="true" />
-                <element signature="e#837#838#0" expanded="true" />
+                <element signature="e#703#704#0" expanded="true" />
+                <element signature="e#742#743#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -34,8 +36,45 @@
       <file leaf-file-name="SectionType.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/model/SectionType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+              <folding>
+                <element signature="e#253#254#0" expanded="true" />
+                <element signature="e#276#277#0" expanded="true" />
+                <element signature="e#322#323#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Link.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Link.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding>
+                <element signature="e#196#197#0" expanded="true" />
+                <element signature="e#217#218#0" expanded="true" />
+                <element signature="e#245#246#0" expanded="true" />
+                <element signature="e#263#264#0" expanded="true" />
+                <element signature="e#290#291#0" expanded="true" />
+                <element signature="e#307#308#0" expanded="true" />
+                <element signature="e#416#417#0" expanded="true" />
+                <element signature="e#448#449#0" expanded="true" />
+                <element signature="e#479#480#0" expanded="true" />
+                <element signature="e#498#499#0" expanded="true" />
+                <element signature="e#779#780#0" expanded="true" />
+                <element signature="e#816#817#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContactType.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/model/ContactType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -51,17 +90,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TextSection.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/model/TextSection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrganizationSection.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OrganizationSection.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/model/OrganizationSection.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
@@ -94,8 +123,8 @@
       <file leaf-file-name="MultiTextSection.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/model/MultiTextSection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="41" lean-forward="false" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+            <state relative-caret-position="119">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -147,17 +176,17 @@
         <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Дштл.java" />
         <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Link.java" />
         <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Resume.java" />
-        <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/ContactType.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/Main.java" />
-        <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/SectionType.java" />
         <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Contact.java" />
-        <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/MultiTextSection.java" />
-        <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Section.java" />
         <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/OrganizationPeriod.java" />
         <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Organization.java" />
         <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/OrganizationSection.java" />
         <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/TextSection.java" />
+        <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/MultiTextSection.java" />
+        <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Section.java" />
+        <option value="$PROJECT_DIR$/src/main/Main.java" />
+        <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/ContactType.java" />
+        <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/SectionType.java" />
       </list>
     </option>
   </component>
@@ -437,7 +466,7 @@
       <workItem from="1518519404849" duration="1153000" />
       <workItem from="1518689704178" duration="1629000" />
       <workItem from="1518809003511" duration="1411000" />
-      <workItem from="1518944912415" duration="126000" />
+      <workItem from="1518944912415" duration="2045000" />
     </task>
     <task id="LOCAL-00001" summary="add textsection">
       <created>1518691711019</created>
@@ -453,11 +482,18 @@
       <option name="project" value="LOCAL" />
       <updated>1518809446955</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="implement model">
+      <created>1518945056024</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1518945056024</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25606000" />
+    <option name="totallyTimeSpent" value="27525000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -465,6 +501,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -487,7 +524,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -501,7 +537,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add textsection" />
     <MESSAGE value="add periods" />
-    <option name="LAST_COMMIT_MESSAGE" value="add periods" />
+    <MESSAGE value="implement model" />
+    <MESSAGE value="update SectionType" />
+    <option name="LAST_COMMIT_MESSAGE" value="update SectionType" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -513,9 +551,8 @@
         <state relative-caret-position="136">
           <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#837#838#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -525,8 +562,8 @@
         <state relative-caret-position="170">
           <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
           <folding>
-            <element signature="e#104#105#0" expanded="true" />
-            <element signature="e#121#122#0" expanded="true" />
+            <element signature="e#104#105#0" expanded="false" />
+            <element signature="e#121#122#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -557,9 +594,8 @@
         <state relative-caret-position="136">
           <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#837#838#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -569,8 +605,8 @@
         <state relative-caret-position="170">
           <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
           <folding>
-            <element signature="e#104#105#0" expanded="true" />
-            <element signature="e#121#122#0" expanded="true" />
+            <element signature="e#104#105#0" expanded="false" />
+            <element signature="e#121#122#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -601,9 +637,8 @@
         <state relative-caret-position="204">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#837#838#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -642,9 +677,8 @@
         <state relative-caret-position="136">
           <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#837#838#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -662,9 +696,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#837#838#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -674,9 +707,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#837#838#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -686,9 +718,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#837#838#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -825,39 +856,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Link.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="e#196#197#0" expanded="true" />
-            <element signature="e#217#218#0" expanded="true" />
-            <element signature="e#245#246#0" expanded="true" />
-            <element signature="e#263#264#0" expanded="true" />
-            <element signature="e#290#291#0" expanded="true" />
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#448#449#0" expanded="true" />
-            <element signature="e#479#480#0" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
-            <element signature="e#779#780#0" expanded="true" />
-            <element signature="e#816#817#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/src.zip!/java/lang/Enum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="792">
           <caret line="198" column="19" lean-forward="true" selection-start-line="198" selection-start-column="19" selection-end-line="198" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/model/ContactType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -874,29 +876,9 @@
         <state relative-caret-position="85">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="e#104#105#0" expanded="true" />
-            <element signature="e#121#122#0" expanded="true" />
+            <element signature="e#104#105#0" expanded="false" />
+            <element signature="e#121#122#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#837#838#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/model/SectionType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -910,38 +892,6 @@
             <element signature="e#297#298#0" expanded="true" />
             <element signature="e#316#317#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/model/MultiTextSection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="41" lean-forward="false" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Section.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/model/OrganizationPeriod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Organization.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -977,44 +927,101 @@
           <ID>JAVA</ID>
           <OriginalElement>ru.javawebinar.webapp.model</OriginalElement>
           <nodes>
-            <node x="0.0" y="113.0">ru.javawebinar.webapp.model.OrganizationSection</node>
-            <node x="377.0" y="428.0">ru.javawebinar.webapp.model.Organization</node>
-            <node x="165.0" y="221.0">ru.javawebinar.webapp.model.Resume</node>
-            <node x="405.0" y="221.0">ru.javawebinar.webapp.model.SectionType</node>
-            <node x="0.0" y="221.0">ru.javawebinar.webapp.model.ContactType</node>
-            <node x="229.0" y="113.0">ru.javawebinar.webapp.model.MultiTextSection</node>
-            <node x="0.0" y="591.0">ru.javawebinar.webapp.model.Contact</node>
-            <node x="0.0" y="428.0">ru.javawebinar.webapp.model.OrganizationPeriod</node>
-            <node x="421.0" y="102.0">ru.javawebinar.webapp.model.TextSection</node>
-            <node x="197.0" y="428.0">ru.javawebinar.webapp.model.Link</node>
-            <node x="234.0" y="0.0">ru.javawebinar.webapp.model.Section</node>
+            <node x="463.8125" y="160.0">ru.javawebinar.webapp.model.OrganizationSection</node>
+            <node x="522.5625" y="80.0">ru.javawebinar.webapp.model.Organization</node>
+            <node x="36.0" y="160.0">ru.javawebinar.webapp.model.Resume</node>
+            <node x="0.0" y="0.0">ru.javawebinar.webapp.model.ContactType</node>
+            <node x="232.5" y="0.0">ru.javawebinar.webapp.model.SectionType</node>
+            <node x="148.0" y="160.0">ru.javawebinar.webapp.model.MultiTextSection</node>
+            <node x="13.0" y="80.0">ru.javawebinar.webapp.model.Contact</node>
+            <node x="439.5625" y="0.0">ru.javawebinar.webapp.model.OrganizationPeriod</node>
+            <node x="307.0" y="160.0">ru.javawebinar.webapp.model.TextSection</node>
+            <node x="611.5625" y="0.0">ru.javawebinar.webapp.model.Link</node>
+            <node x="245.5" y="80.0">ru.javawebinar.webapp.model.Section</node>
           </nodes>
           <notes />
           <edges>
+            <edge source="ru.javawebinar.webapp.model.OrganizationSection" target="ru.javawebinar.webapp.model.Organization">
+              <point x="39.25" y="-15.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
             <edge source="ru.javawebinar.webapp.model.TextSection" target="ru.javawebinar.webapp.model.Section">
-              <point x="0.0" y="-37.0" />
-              <point x="499.5" y="77.0" />
-              <point x="369.0" y="77.0" />
-              <point x="54.0" y="26.0" />
+              <point x="0.0" y="-15.0" />
+              <point x="362.5" y="140.0" />
+              <point x="301.125" y="140.0" />
+              <point x="11.125" y="15.0" />
+            </edge>
+            <edge source="ru.javawebinar.webapp.model.Organization" target="ru.javawebinar.webapp.model.OrganizationPeriod">
+              <point x="-29.5" y="-15.0" />
+              <point x="552.0625" y="55.0" />
+              <point x="515.5625" y="55.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ru.javawebinar.webapp.model.Resume" target="ru.javawebinar.webapp.model.Section">
+              <point x="23.0" y="-15.0" />
+              <point x="105.0" y="130.0" />
+              <point x="256.625" y="130.0" />
+              <point x="-33.375" y="15.0" />
+            </edge>
+            <edge source="ru.javawebinar.webapp.model.Contact" target="ru.javawebinar.webapp.model.ContactType">
+              <point x="23.0" y="-15.0" />
+              <point x="82.0" y="55.0" />
+              <point x="88.5" y="55.0" />
+              <point x="29.5" y="15.0" />
+            </edge>
+            <edge source="ru.javawebinar.webapp.model.Organization" target="ru.javawebinar.webapp.model.Link">
+              <point x="29.5" y="-15.0" />
+              <point x="611.0625" y="55.0" />
+              <point x="647.5625" y="55.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ru.javawebinar.webapp.model.Section" target="ru.javawebinar.webapp.model.SectionType">
+              <point x="0.0" y="-15.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="ru.javawebinar.webapp.model.Resume" target="ru.javawebinar.webapp.model.Contact">
+              <point x="-23.0" y="-15.0" />
+              <point x="0.0" y="15.0" />
             </edge>
             <edge source="ru.javawebinar.webapp.model.MultiTextSection" target="ru.javawebinar.webapp.model.Section">
-              <point x="0.0" y="-26.0" />
-              <point x="0.0" y="26.0" />
+              <point x="0.0" y="-15.0" />
+              <point x="217.5" y="140.0" />
+              <point x="278.875" y="140.0" />
+              <point x="-11.125" y="15.0" />
             </edge>
             <edge source="ru.javawebinar.webapp.model.OrganizationSection" target="ru.javawebinar.webapp.model.Section">
-              <point x="0.0" y="-26.0" />
-              <point x="104.5" y="77.0" />
-              <point x="261.0" y="77.0" />
-              <point x="-54.0" y="26.0" />
+              <point x="-39.25" y="-15.0" />
+              <point x="503.0625" y="130.0" />
+              <point x="323.375" y="130.0" />
+              <point x="33.375" y="15.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="224.0" y="168.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="220.0" y="220.0" />
           <SelectedNodes />
-          <Categories>
-            <Category>Fields</Category>
-          </Categories>
+          <Categories />
           <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Link.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#196#197#0" expanded="true" />
+            <element signature="e#217#218#0" expanded="true" />
+            <element signature="e#245#246#0" expanded="true" />
+            <element signature="e#263#264#0" expanded="true" />
+            <element signature="e#290#291#0" expanded="true" />
+            <element signature="e#307#308#0" expanded="true" />
+            <element signature="e#416#417#0" expanded="true" />
+            <element signature="e#448#449#0" expanded="true" />
+            <element signature="e#479#480#0" expanded="true" />
+            <element signature="e#498#499#0" expanded="true" />
+            <element signature="e#779#780#0" expanded="true" />
+            <element signature="e#816#817#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1023,6 +1030,69 @@
         <state relative-caret-position="119">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Organization.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/model/MultiTextSection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Section.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/model/OrganizationPeriod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/model/ContactType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/model/SectionType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+          <folding>
+            <element signature="e#253#254#0" expanded="true" />
+            <element signature="e#276#277#0" expanded="true" />
+            <element signature="e#322#323#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+          <folding>
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
