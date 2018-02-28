@@ -9,7 +9,7 @@ import java.util.Collection;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class ArrayStorage implements IStorage {
+public class ArrayStorage extends AbstractStorage {
 
 	private static final int LIMIT = 100;
 	private Resume[] array = new Resume[LIMIT];
