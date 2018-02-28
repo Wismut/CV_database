@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
-public class Resume {
+public class Resume implements Comparable<Resume> {
 	private String uuid;
 	private String fullName;
 	private String location;
@@ -18,23 +18,28 @@ public class Resume {
 		this(UUID.randomUUID().toString(), fullName, location);
 	}
 
-	public Resume(String uuid, String fullName, String location) {
-		this.uuid = uuid;
-		this.fullName = fullName;
-		this.location = location;
-	}
-
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 		Resume resume = (Resume) o;
-		return Objects.equals(uuid, resume.uuid);
+		return Objects.equals(uuid, resume.uuid) &&
+				Objects.equals(fullName, resume.fullName) &&
+				Objects.equals(location, resume.location) &&
+				Objects.equals(homePage, resume.homePage) &&
+				Objects.equals(contacts, resume.contacts) &&
+				Objects.equals(sections, resume.sections);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(uuid);
+		return Objects.hash(uuid, fullName, location, homePage, contacts, sections);
+	}
+
+	public Resume(String uuid, String fullName, String location) {
+		this.uuid = uuid;
+		this.fullName = fullName;
+		this.location = location;
 	}
 
 	public void addSection(Section section) {
@@ -67,5 +72,26 @@ public class Resume {
 
 	public List<Section> getSections() {
 		return sections;
+	}
+
+	public void setUuid(String uuid) {
+		this.uuid = uuid;
+	}
+
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	public void setHomePage(String homePage) {
+		this.homePage = homePage;
+	}
+
+	@Override
+	public int compareTo(Resume o) {
+		return fullName.compareTo(o.fullName);
 	}
 }

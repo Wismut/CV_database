@@ -3,17 +3,29 @@ package ru.javawebinar.webapp.storage;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Test;
+import ru.javawebinar.webapp.WebAppException;
 import ru.javawebinar.webapp.model.Contact;
 import ru.javawebinar.webapp.model.ContactType;
 import ru.javawebinar.webapp.model.Resume;
 
+import java.util.Arrays;
+import java.util.Collection;
+
 public class ArrayStorageTest {
 
-	private static Resume R1, R2, R3;
+	private Resume R1, R2, R3;
 
 	private ArrayStorage storage = new ArrayStorage();
 
-	static {
+
+	@BeforeClass
+	public static void beforeClass() {
+		// same as static block
+	}
+
+	@Before
+	public void before() {
 		R1 = new Resume("полное имя1", "location1");
 		R1.addContact(new Contact(ContactType.MAIL, "erfg@dfg.com"));
 		R1.addContact(new Contact(ContactType.PHONE, "23453455"));
@@ -21,20 +33,6 @@ public class ArrayStorageTest {
 		R2.addContact(new Contact(ContactType.MAIL, "eredrfgedfg@dfg.com"));
 		R2.addContact(new Contact(ContactType.PHONE, "2344564553455"));
 		R3 = new Resume("полное имяr564553", null);
-//		R3.addContact(new Contact(ContactType.MAIL, "erf007g@dfg.com"));
-//		R3.addContact(new Contact(ContactType.PHONE, "203455"));
-	}
-
-	@BeforeClass
-	public static void beforeClass() {
-		System.out.println(R1.getUuid());
-		System.out.println(R2.getUuid());
-		System.out.println(R3.getUuid());
-		// same as static block
-	}
-
-	@Before
-	public void before() {
 		storage.clear();
 		storage.save(R1);
 		storage.save(R2);
@@ -70,15 +68,25 @@ public class ArrayStorageTest {
 		Assert.assertEquals(R3.getUuid(), resume.getUuid());
 	}
 
-	@org.junit.Test
+	@Test(expected = WebAppException.class)
+	public void deleteNotFound() {
+		storage.load("dummy");
+	}
+
+	@org.junit.Test(expected = WebAppException.class)
 	public void delete() {
 		storage.delete(R1.getUuid());
 		Assert.assertEquals(2, storage.size());
-		Assert.assertEquals(null, storage.load(R1.getUuid()));
+		Assert.assertEquals(R2, storage.load(R2.getUuid()));
+		storage.load(R1.getUuid());
 	}
 
 	@org.junit.Test
 	public void getAllSorted() {
+		Resume[] resumes = new Resume[]{R1, R3, R2};
+		Arrays.sort(resumes);
+		Assert.assertTrue(Arrays.equals(resumes, storage.getAllSorted().toArray()));
+//		Collection<Resume> allSortedResumes = storage.getAllSorted();
 	}
 
 	@org.junit.Test

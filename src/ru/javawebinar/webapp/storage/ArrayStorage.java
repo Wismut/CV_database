@@ -81,7 +81,7 @@ public class ArrayStorage implements IStorage {
 		if (idx == -1) throw new WebAppException("Resume " + uuid + " not exist");
 		int numMoved = size - idx - 1;
 		if (numMoved > 0)
-			System.arraycopy(array, idx, array, idx - 1, numMoved);
+			System.arraycopy(array, idx + 1, array, idx, numMoved);
 		array[--size] = null;
 //		if (uuid == null) return;
 //		for (int i = 0; i < LIMIT; i++) {
