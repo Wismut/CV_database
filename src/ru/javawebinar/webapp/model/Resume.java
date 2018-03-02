@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
-public final class Resume { // implements Comparable<Resume> {
-	private String uuid;
+public final class Resume implements Comparable<Resume> {
+	private final String uuid;
 	private String fullName;
 	private String location;
 	private String homePage;
@@ -23,17 +23,12 @@ public final class Resume { // implements Comparable<Resume> {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 		Resume resume = (Resume) o;
-		return Objects.equals(uuid, resume.uuid) &&
-				Objects.equals(fullName, resume.fullName) &&
-				Objects.equals(location, resume.location) &&
-				Objects.equals(homePage, resume.homePage) &&
-				Objects.equals(contacts, resume.contacts) &&
-				Objects.equals(sections, resume.sections);
+		return Objects.equals(uuid, resume.uuid);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(uuid, fullName, location, homePage, contacts, sections);
+		return Objects.hash(uuid);
 	}
 
 	public Resume(String uuid, String fullName, String location) {
@@ -74,10 +69,6 @@ public final class Resume { // implements Comparable<Resume> {
 		return sections;
 	}
 
-	public void setUuid(String uuid) {
-		this.uuid = uuid;
-	}
-
 	public void setFullName(String fullName) {
 		this.fullName = fullName;
 	}
@@ -90,7 +81,7 @@ public final class Resume { // implements Comparable<Resume> {
 		this.homePage = homePage;
 	}
 
-	//	@Override
+	@Override
 	public int compareTo(Resume o) {
 		return fullName.compareTo(o.fullName);
 	}
