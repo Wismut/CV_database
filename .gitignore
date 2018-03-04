@@ -24,3 +24,6 @@ hs_err_pid*
 .idea/inspectionProfiles/
 /.idea/
 /out/
+/test/main/
+lib/
+test/main/
