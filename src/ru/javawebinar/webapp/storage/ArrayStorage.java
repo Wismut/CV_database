@@ -15,56 +15,33 @@ public class ArrayStorage extends AbstractStorage {
 	private int size = 0;
 
 	@Override
-	public void clear() {
-		logger.info("Delete all resumes.");
+	protected void doClear() {
 		Arrays.fill(array, null);
 		size = 0;
 	}
 
 	@Override
-	public void update(Resume r) {
-		logger.info("Update resume with " + r.getUuid());
+	protected void doUpdate(Resume r) {
 		int idx = getIndex(r.getUuid());
 		if (idx == -1) throw new WebAppException("Resume " + r.getUuid() + " not exist", r);
 		array[idx] = r;
-//		for (int i = 0; i < LIMIT; i++) {
-//			if (array[i] != null && array[i].equals(r)) {
-//				array[i] = r;
-//				return;
-//			}
-//		}
 	}
 
 	@Override
-	public Resume load(String uuid) {
-		logger.info("Load resume with " + uuid);
+	public Resume doLoad(String uuid) {
 		int idx = getIndex(uuid);
 		if (idx == -1) throw new WebAppException("Resume " + uuid + " not exist");
 		return array[idx];
-//		if (uuid == null) return null;
-//		for (int i = 0; i < LIMIT; i++) {
-//			if (array[i] != null && uuid.equals(array[i].getUuid()))
-//				return array[i];
-//		}
-//		return null;
 	}
 
 	@Override
-	public void delete(String uuid) {
-		logger.info("Delete resume with " + uuid);
+	public void doDelete(String uuid) {
 		int idx = getIndex(uuid);
 		if (idx == -1) throw new WebAppException("Resume " + uuid + " not exist");
 		int numMoved = size - idx - 1;
 		if (numMoved > 0)
 			System.arraycopy(array, idx + 1, array, idx, numMoved);
 		array[--size] = null;
-//		if (uuid == null) return;
-//		for (int i = 0; i < LIMIT; i++) {
-//			if (array[i] != null && uuid.equals(array[i].getUuid())) {
-//				array[i] = null;
-//				return;
-//			}
-//		}
 	}
 
 	@Override

@@ -10,9 +10,8 @@ import ru.javawebinar.webapp.model.ContactType;
 import ru.javawebinar.webapp.model.Resume;
 
 import java.util.Arrays;
-import java.util.Collection;
 
-public class ArrayStorageTest {
+public class ArrayStorageTest extends AbstractStorageTest {
 
 	private Resume R1, R2, R3;
 
@@ -49,20 +48,20 @@ public class ArrayStorageTest {
 	public void save() {
 		storage.clear();
 		storage.save(R1);
-		Assert.assertEquals(R1, storage.load(R1.getUuid()));
+		Assert.assertEquals(R1, storage.doLoad(R1.getUuid()));
 	}
 
 	@org.junit.Test
 	public void update() {
 		storage.update(new Resume(R2.getUuid(), "new full name", "loca"));
-		Resume resume = storage.load(R2.getUuid());
+		Resume resume = storage.doLoad(R2.getUuid());
 		Assert.assertEquals(resume.getFullName(), "new full name");
 		Assert.assertEquals(resume.getLocation(), "loca");
 	}
 
 	@org.junit.Test
 	public void load() {
-		Resume resume = storage.load(R3.getUuid());
+		Resume resume = storage.doLoad(R3.getUuid());
 		Assert.assertEquals(R3.getLocation(), resume.getLocation());
 		Assert.assertEquals(R3.getFullName(), resume.getFullName());
 		Assert.assertEquals(R3.getUuid(), resume.getUuid());
@@ -70,15 +69,15 @@ public class ArrayStorageTest {
 
 	@Test(expected = WebAppException.class)
 	public void deleteNotFound() {
-		storage.load("dummy");
+		storage.doLoad("dummy");
 	}
 
 	@org.junit.Test(expected = WebAppException.class)
 	public void delete() {
-		storage.delete(R1.getUuid());
+		storage.doDelete(R1.getUuid());
 		Assert.assertEquals(2, storage.size());
-		Assert.assertEquals(R2, storage.load(R2.getUuid()));
-		storage.load(R1.getUuid());
+		Assert.assertEquals(R2, storage.doLoad(R2.getUuid()));
+		storage.doLoad(R1.getUuid());
 	}
 
 	@org.junit.Test
