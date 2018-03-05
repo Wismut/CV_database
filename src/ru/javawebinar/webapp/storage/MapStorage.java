@@ -6,7 +6,7 @@ import ru.javawebinar.webapp.model.Resume;
 
 import java.util.*;
 
-public class CollectionStorage extends AbstractStorage {
+public class MapStorage extends AbstractStorage {
 
 	public Collection<Resume> resumeList = new HashSet<>();
 

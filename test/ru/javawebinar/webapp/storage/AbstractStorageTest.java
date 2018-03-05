@@ -16,7 +16,6 @@ public abstract class AbstractStorageTest {
 
 	protected IStorage storage;
 
-
 	@BeforeClass
 	public static void beforeClass() {
 		// same as static block

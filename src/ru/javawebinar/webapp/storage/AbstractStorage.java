@@ -5,19 +5,23 @@ import ru.javawebinar.webapp.WebAppException;
 import ru.javawebinar.webapp.model.Resume;
 
 import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 import java.util.logging.Logger;
 
 public abstract class AbstractStorage implements IStorage {
-	protected Logger logger = Logger.getLogger(getClass().getName());
+	protected final Logger logger = Logger.getLogger(getClass().getName());
 
 	@Override
 	public void save(Resume r) throws WebAppException {
 		logger.info("Save resume with uuid = " + r.getUuid());
-		// TODO: 01.03.2018  try to move here exception treatment
+		if (exist(r.getUuid())) throw new WebAppException("Resume " + r.getUuid() + " already exist");
 		doSave(r);
 	}
 
 	protected abstract void doSave(Resume r);
+
+	protected abstract boolean exist(String uuid);
 
 	@Override
 	public void clear() {
@@ -30,6 +34,7 @@ public abstract class AbstractStorage implements IStorage {
 	@Override
 	public void update(Resume r) {
 		logger.info("Update resume with " + r.getUuid());
+		if (!exist(r.getUuid())) throw new WebAppException("Resume " + r.getUuid() + " not found");
 		doUpdate(r);
 	}
 
@@ -38,6 +43,7 @@ public abstract class AbstractStorage implements IStorage {
 	@Override
 	public Resume load(String uuid) {
 		logger.info("Load resume with " + uuid);
+		if (!exist(uuid)) throw new WebAppException("Resume " + uuid + " not found");
 		return doLoad(uuid);
 	}
 
@@ -46,6 +52,7 @@ public abstract class AbstractStorage implements IStorage {
 	@Override
 	public void delete(String uuid) {
 		logger.info("Delete resume with " + uuid);
+		if (!exist(uuid)) throw new WebAppException("Resume " + uuid + " not found");
 		doDelete(uuid);
 	}
 
@@ -53,11 +60,14 @@ public abstract class AbstractStorage implements IStorage {
 
 	@Override
 	public Collection<Resume> getAllSorted() {
-		return null;
+		logger.info("Get sorted resumes");
+		List<Resume> resumes = doGetAll();
+		Collections.sort(resumes);
+		return resumes;
 	}
 
+	protected abstract List<Resume> doGetAll();
+
 	@Override
-	public int size() {
-		return 0;
-	}
+	public abstract int size();
 }
