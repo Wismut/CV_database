@@ -5,6 +5,7 @@ import ru.javawebinar.webapp.model.Resume;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 
 public class ArrayStorage extends AbstractStorage {
 
@@ -51,6 +52,11 @@ public class ArrayStorage extends AbstractStorage {
 	}
 
 	@Override
+	protected List<Resume> doGetAll() {
+		return Arrays.asList(array);
+	}
+
+	@Override
 	public int size() {
 		int count = 0;
 		for (int i = 0; i < LIMIT; i++) {
@@ -72,5 +78,13 @@ public class ArrayStorage extends AbstractStorage {
 		int idx = getIndex(r.getUuid());
 		if (idx != -1) throw new WebAppException("Resume " + r.getUuid() + " already exist", r);
 		array[size++] = r;
+	}
+
+	@Override
+	protected boolean exist(String uuid) {
+		for (Resume resume : array) {
+			if (resume != null && resume.getUuid().equals(uuid)) return true;
+		}
+		return false;
 	}
 }

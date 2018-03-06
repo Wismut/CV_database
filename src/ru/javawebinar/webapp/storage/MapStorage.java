@@ -16,6 +16,14 @@ public class MapStorage extends AbstractStorage {
 	}
 
 	@Override
+	protected boolean exist(String uuid) {
+		for (Resume resume : resumeList) {
+			if (resume.getUuid().equals(uuid)) return true;
+		}
+		return false;
+	}
+
+	@Override
 	protected void doClear() {
 		resumeList.clear();
 	}
@@ -41,6 +49,11 @@ public class MapStorage extends AbstractStorage {
 		Set<Resume> sortedSet = new TreeSet<>(Comparator.comparing(Resume::getFullName));
 		sortedSet.addAll(resumeList);
 		return sortedSet;
+	}
+
+	@Override
+	protected List<Resume> doGetAll() {
+		return null;
 	}
 
 	@Override
