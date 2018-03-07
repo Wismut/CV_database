@@ -53,8 +53,8 @@ public abstract class AbstractStorageTest {
 	public void update() {
 		R2.setFullName("new full name");
 		R2.setLocation("loca");
-		Assert.assertEquals(R2.getFullName(), "new full name");
-		Assert.assertEquals(R2.getLocation(), "loca");
+		Assert.assertEquals(R2.getFullName(), storage.load(R2.getUuid()).getFullName());
+		Assert.assertEquals(R2.getLocation(), storage.load(R2.getUuid()).getLocation());
 	}
 
 	@org.junit.Test

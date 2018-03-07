@@ -64,6 +64,7 @@ public abstract class AbstractStorage implements IStorage {
 		List<Resume> resumes = doGetAll();
 		Collections.sort(resumes);
 		return resumes;
+//		return Collections.singletonList(new Resume());
 	}
 
 	protected abstract List<Resume> doGetAll();

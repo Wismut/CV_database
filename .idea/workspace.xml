@@ -4,12 +4,12 @@
     <bookmark url="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/lang/Exception.java" line="43" mnemonic="D" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc817d7c-217d-4ce5-baf1-ab7d74a99e82" name="Default" comment="update AbstractStorage">
+    <list default="true" id="bc817d7c-217d-4ce5-baf1-ab7d74a99e82" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Resume.java" afterPath="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Resume.java" />
+      <change beforePath="$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/AbstractStorage.java" afterPath="$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/AbstractStorage.java" />
       <change beforePath="$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/ArrayStorage.java" afterPath="$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/ArrayStorage.java" />
-      <change beforePath="$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/MapStorage.java" afterPath="$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/MapStorage.java" />
       <change beforePath="$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/AbstractStorageTest.java" afterPath="$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/AbstractStorageTest.java" />
-      <change beforePath="$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/ArrayStorageTest.java" afterPath="$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/ArrayStorageTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -25,8 +25,8 @@
       <file leaf-file-name="MapStorage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/MapStorage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+            <state relative-caret-position="782">
+              <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#305#306#0" expanded="true" />
@@ -49,22 +49,22 @@
       <file leaf-file-name="ArrayStorageTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/ArrayStorageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="47" lean-forward="false" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+            <state relative-caret-position="34">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractStorageTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AbstractStorageTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/AbstractStorageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+            <state relative-caret-position="1156">
+              <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1841#1842#0" expanded="true" />
-                <element signature="e#1869#1870#0" expanded="true" />
+                <element signature="e#1900#1901#0" expanded="true" />
+                <element signature="e#1928#1929#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,8 +73,8 @@
       <file leaf-file-name="AbstractStorage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/AbstractStorage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="833">
+              <caret line="55" column="23" lean-forward="false" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -82,15 +82,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArrayStorage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/ArrayStorage.java">
+      <file leaf-file-name="Resume.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Resume.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="85" column="34" lean-forward="false" selection-start-line="85" selection-start-column="34" selection-end-line="85" selection-end-column="34" />
+            <state relative-caret-position="326">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1386#1387#0" expanded="true" />
-                <element signature="e#1420#1421#0" expanded="true" />
+                <element signature="e#457#458#0" expanded="true" />
+                <element signature="e#518#519#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArrayStorage.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/ArrayStorage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1392#1393#0" expanded="true" />
+                <element signature="e#1426#1427#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -99,8 +113,8 @@
       <file leaf-file-name="MapStorageTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/MapStorageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="44" lean-forward="true" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
+            <state relative-caret-position="119">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -167,7 +181,6 @@
         <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/WebAppException.java" />
         <option value="$PROJECT_DIR$/src/main/ObjectSuzeFetcher.java" />
         <option value="$PROJECT_DIR$/src/main/ObjectSizeFetcher.java" />
-        <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Resume.java" />
         <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Organization.java" />
         <option value="$PROJECT_DIR$/src/main/Main.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -176,10 +189,11 @@
         <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/CollectionStorage.java" />
         <option value="$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/MapStorageTest.java" />
         <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/MapStorage.java" />
-        <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/AbstractStorage.java" />
         <option value="$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/ArrayStorageTest.java" />
-        <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/ArrayStorage.java" />
         <option value="$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/AbstractStorageTest.java" />
+        <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/ArrayStorage.java" />
+        <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/AbstractStorage.java" />
+        <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Resume.java" />
       </list>
     </option>
   </component>
@@ -212,7 +226,8 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -320,8 +335,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -641,7 +655,8 @@
       <workItem from="1520176445143" duration="1583000" />
       <workItem from="1520189250393" duration="3089000" />
       <workItem from="1520277672720" duration="2177000" />
-      <workItem from="1520327340128" duration="1770000" />
+      <workItem from="1520327340128" duration="2848000" />
+      <workItem from="1520417518948" duration="47000" />
     </task>
     <task id="LOCAL-00001" summary="add textsection">
       <created>1518691711019</created>
@@ -769,33 +784,28 @@
       <option name="project" value="LOCAL" />
       <updated>1520279910730</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="update AbstractStorage">
+      <created>1520329699537</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1520329699537</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ArrayStorageTest - 2018.03.06 at 11h 39m 27s.xml">
-      <configuration name="ArrayStorageTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArrayStorageTest - 2018.03.06 at 11h 42m 19s.xml">
-      <configuration name="ArrayStorageTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArrayStorageTest - 2018.03.06 at 11h 42m 47s.xml">
-      <configuration name="ArrayStorageTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArrayStorageTest - 2018.03.06 at 11h 43m 38s.xml">
-      <configuration name="ArrayStorageTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ArrayStorageTest - 2018.03.06 at 11h 44m 54s.xml">
-      <configuration name="ArrayStorageTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ArrayStorageTest - 2018.03.06 at 11h 47m 17s.xml">
       <configuration name="ArrayStorageTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ArrayStorageTest - 2018.03.06 at 11h 47m 27s.xml">
       <configuration name="ArrayStorageTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MapStorageTest - 2018.03.06 at 11h 31m 57s.xml">
-      <configuration name="MapStorageTest" configurationId="JUnit" />
+    <history-entry file="ArrayStorageTest - 2018.03.06 at 11h 50m 09s.xml">
+      <configuration name="ArrayStorageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayStorageTest - 2018.03.06 at 12h 03m 05s.xml">
+      <configuration name="ArrayStorageTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="MapStorageTest - 2018.03.06 at 11h 45m 08s.xml">
       <configuration name="MapStorageTest" configurationId="JUnit" />
@@ -803,9 +813,21 @@
     <history-entry file="MapStorageTest - 2018.03.06 at 11h 47m 08s.xml">
       <configuration name="MapStorageTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MapStorageTest - 2018.03.06 at 11h 50m 19s.xml">
+      <configuration name="MapStorageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MapStorageTest - 2018.03.06 at 11h 56m 54s.xml">
+      <configuration name="MapStorageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MapStorageTest - 2018.03.06 at 11h 57m 41s.xml">
+      <configuration name="MapStorageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MapStorageTest - 2018.03.06 at 12h 02m 40s.xml">
+      <configuration name="MapStorageTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83386000" />
+    <option name="totallyTimeSpent" value="84511000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -822,7 +844,6 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -833,7 +854,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29584223" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="782" y="58" width="356" height="924" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29904053" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="782" y="58" width="356" height="924" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -846,6 +867,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -879,18 +901,24 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
         <watch expression="expected.equals(actual)" language="JAVA" />
         <watch expression="expected == actual" language="JAVA" />
         <watch expression="expected.getClass()" language="JAVA" />
+        <watch expression="storage.getAllSorted()" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>storage.getAllSorted()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>expected.getClass()</expression-string>
         <language-id>JAVA</language-id>
@@ -1121,13 +1149,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Resume.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/util/Comparator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
@@ -1146,10 +1167,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="147" column="19" lean-forward="false" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
-          <folding>
-            <element signature="e#5748#5749#0" expanded="false" />
-            <element signature="e#5784#5785#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1192,7 +1209,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1200,18 +1216,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/util/Collections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="139" column="57" lean-forward="false" selection-start-line="139" selection-start-column="57" selection-end-line="139" selection-end-column="57" />
-          <folding>
-            <element signature="e#5644#5645#0" expanded="false" />
-            <element signature="e#5675#5676#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1229,7 +1233,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1237,10 +1240,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding>
-            <element signature="e#8659#8796#0" expanded="false" />
-            <element signature="e#8795#8796#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1248,7 +1247,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1256,14 +1254,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="242" column="0" lean-forward="false" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
-          <folding>
-            <element signature="e#2129#2130#0" expanded="false" />
-            <element signature="e#2158#2159#0" expanded="false" />
-            <element signature="e#6903#6997#0" expanded="false" />
-            <element signature="e#6996#6997#0" expanded="false" />
-            <element signature="e#7127#7230#0" expanded="false" />
-            <element signature="e#7229#7230#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1271,52 +1261,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="157" column="0" lean-forward="false" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/ArrayStorageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="47" lean-forward="false" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/AbstractStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/ArrayStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="85" column="34" lean-forward="false" selection-start-line="85" selection-start-column="34" selection-end-line="85" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1386#1387#0" expanded="true" />
-            <element signature="e#1420#1421#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/MapStorageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="44" lean-forward="true" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/MapStorage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        <state relative-caret-position="782">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#305#306#0" expanded="true" />
@@ -1335,14 +1286,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/util/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="4820" column="55" lean-forward="true" selection-start-line="4820" selection-start-column="55" selection-end-line="4820" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/AbstractStorageTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        <state relative-caret-position="1156">
+          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1841#1842#0" expanded="true" />
-            <element signature="e#1869#1870#0" expanded="true" />
+            <element signature="e#1900#1901#0" expanded="true" />
+            <element signature="e#1928#1929#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/MapStorageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/AbstractStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="55" column="23" lean-forward="false" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Resume.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#457#458#0" expanded="true" />
+            <element signature="e#518#519#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/ArrayStorageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/ArrayStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1392#1393#0" expanded="true" />
+            <element signature="e#1426#1427#0" expanded="true" />
           </folding>
         </state>
       </provider>
