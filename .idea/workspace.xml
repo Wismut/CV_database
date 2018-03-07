@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="bc817d7c-217d-4ce5-baf1-ab7d74a99e82" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Resume.java" afterPath="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Resume.java" />
-      <change beforePath="$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/AbstractStorage.java" afterPath="$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/AbstractStorage.java" />
       <change beforePath="$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/ArrayStorage.java" afterPath="$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/ArrayStorage.java" />
+      <change beforePath="$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/MapStorage.java" afterPath="$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/MapStorage.java" />
       <change beforePath="$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/AbstractStorageTest.java" afterPath="$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/AbstractStorageTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -25,22 +24,26 @@
       <file leaf-file-name="MapStorage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/MapStorage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+            <state relative-caret-position="51">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#305#306#0" expanded="true" />
-                <element signature="e#329#330#0" expanded="true" />
-                <element signature="e#532#533#0" expanded="true" />
-                <element signature="e#557#558#0" expanded="true" />
-                <element signature="e#780#781#0" expanded="true" />
-                <element signature="e#809#810#0" expanded="true" />
-                <element signature="e#861#862#0" expanded="true" />
-                <element signature="e#902#903#0" expanded="true" />
-                <element signature="e#1146#1147#0" expanded="true" />
-                <element signature="e#1164#1165#0" expanded="true" />
-                <element signature="e#1197#1198#0" expanded="true" />
-                <element signature="e#1228#1229#0" expanded="true" />
+                <element signature="e#255#256#0" expanded="true" />
+                <element signature="e#285#286#0" expanded="true" />
+                <element signature="e#337#338#0" expanded="true" />
+                <element signature="e#372#373#0" expanded="true" />
+                <element signature="e#412#413#0" expanded="true" />
+                <element signature="e#430#431#0" expanded="true" />
+                <element signature="e#479#480#0" expanded="true" />
+                <element signature="e#509#510#0" expanded="true" />
+                <element signature="e#561#562#0" expanded="true" />
+                <element signature="e#588#589#0" expanded="true" />
+                <element signature="e#640#641#0" expanded="true" />
+                <element signature="e#663#664#0" expanded="true" />
+                <element signature="e#712#713#0" expanded="true" />
+                <element signature="e#755#756#0" expanded="true" />
+                <element signature="e#788#789#0" expanded="true" />
+                <element signature="e#812#813#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -49,22 +52,26 @@
       <file leaf-file-name="ArrayStorageTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/ArrayStorageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="68">
+              <caret line="4" column="48" lean-forward="true" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractStorageTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AbstractStorageTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/AbstractStorageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1156">
-              <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+            <state relative-caret-position="348">
+              <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1900#1901#0" expanded="true" />
-                <element signature="e#1928#1929#0" expanded="true" />
+                <element signature="e#2238#2239#0" expanded="true" />
+                <element signature="e#2266#2267#0" expanded="true" />
+                <element signature="e#2340#2341#0" expanded="true" />
+                <element signature="e#2368#2369#0" expanded="true" />
+                <element signature="e#2847#2848#0" expanded="true" />
+                <element signature="e#2892#2893#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,8 +80,8 @@
       <file leaf-file-name="AbstractStorage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/AbstractStorage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="55" column="23" lean-forward="false" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
+            <state relative-caret-position="138">
+              <caret line="37" column="12" lean-forward="true" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -82,29 +89,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Resume.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Resume.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#457#458#0" expanded="true" />
-                <element signature="e#518#519#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="329">
+              <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArrayStorage.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ArrayStorage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/ArrayStorage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="296">
+              <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1392#1393#0" expanded="true" />
-                <element signature="e#1426#1427#0" expanded="true" />
+                <element signature="e#1073#1074#0" expanded="true" />
+                <element signature="e#1128#1129#0" expanded="true" />
+                <element signature="e#1597#1598#0" expanded="true" />
+                <element signature="e#1631#1632#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -113,8 +118,8 @@
       <file leaf-file-name="MapStorageTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/MapStorageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="34">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -148,6 +153,7 @@
       <find>SortedSet</find>
       <find>itera</find>
       <find>equals</find>
+      <find>getName</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -182,18 +188,18 @@
         <option value="$PROJECT_DIR$/src/main/ObjectSuzeFetcher.java" />
         <option value="$PROJECT_DIR$/src/main/ObjectSizeFetcher.java" />
         <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Organization.java" />
-        <option value="$PROJECT_DIR$/src/main/Main.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/Calculator.java" />
         <option value="$PROJECT_DIR$/test/main/CalculatorTest.java" />
         <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/CollectionStorage.java" />
         <option value="$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/MapStorageTest.java" />
-        <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/MapStorage.java" />
         <option value="$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/ArrayStorageTest.java" />
-        <option value="$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/AbstractStorageTest.java" />
+        <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Resume.java" />
         <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/ArrayStorage.java" />
         <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/AbstractStorage.java" />
-        <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Resume.java" />
+        <option value="$PROJECT_DIR$/src/main/Main.java" />
+        <option value="$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/MapStorage.java" />
+        <option value="$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/AbstractStorageTest.java" />
       </list>
     </option>
   </component>
@@ -341,7 +347,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/junit-4.7.jar!/" />
@@ -380,7 +386,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ArrayStorageTest">
+  <component name="RunManager" selected="JUnit.MapStorageTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -589,11 +595,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ArrayStorageTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.MapStorageTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ArrayStorageTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.CalculatorTest" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.MapStorageTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ArrayStorageTest" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ArrayStorageTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.CalculatorTest" />
       </list>
     </recent_temporary>
   </component>
@@ -656,7 +662,7 @@
       <workItem from="1520189250393" duration="3089000" />
       <workItem from="1520277672720" duration="2177000" />
       <workItem from="1520327340128" duration="2848000" />
-      <workItem from="1520417518948" duration="47000" />
+      <workItem from="1520417518948" duration="4002000" />
     </task>
     <task id="LOCAL-00001" summary="add textsection">
       <created>1518691711019</created>
@@ -791,43 +797,50 @@
       <option name="project" value="LOCAL" />
       <updated>1520329699537</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="refactoring Resume">
+      <created>1520417622947</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1520417622947</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ArrayStorageTest - 2018.03.06 at 11h 47m 17s.xml">
+    <history-entry file="ArrayStorageTest - 2018.03.07 at 12h 32m 05s.xml">
       <configuration name="ArrayStorageTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayStorageTest - 2018.03.06 at 11h 47m 27s.xml">
+    <history-entry file="ArrayStorageTest - 2018.03.07 at 12h 49m 50s.xml">
       <configuration name="ArrayStorageTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayStorageTest - 2018.03.06 at 11h 50m 09s.xml">
+    <history-entry file="ArrayStorageTest - 2018.03.07 at 13h 08m 53s.xml">
       <configuration name="ArrayStorageTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ArrayStorageTest - 2018.03.06 at 12h 03m 05s.xml">
+    <history-entry file="ArrayStorageTest - 2018.03.07 at 13h 11m 11s.xml">
       <configuration name="ArrayStorageTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MapStorageTest - 2018.03.06 at 11h 45m 08s.xml">
+    <history-entry file="ArrayStorageTest - 2018.03.07 at 13h 11m 33s.xml">
+      <configuration name="ArrayStorageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayStorageTest - 2018.03.07 at 13h 15m 00s.xml">
+      <configuration name="ArrayStorageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayStorageTest - 2018.03.07 at 13h 18m 37s.xml">
+      <configuration name="ArrayStorageTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MapStorageTest - 2018.03.07 at 13h 08m 10s.xml">
       <configuration name="MapStorageTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MapStorageTest - 2018.03.06 at 11h 47m 08s.xml">
+    <history-entry file="MapStorageTest - 2018.03.07 at 13h 08m 45s.xml">
       <configuration name="MapStorageTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MapStorageTest - 2018.03.06 at 11h 50m 19s.xml">
-      <configuration name="MapStorageTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MapStorageTest - 2018.03.06 at 11h 56m 54s.xml">
-      <configuration name="MapStorageTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MapStorageTest - 2018.03.06 at 11h 57m 41s.xml">
-      <configuration name="MapStorageTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MapStorageTest - 2018.03.06 at 12h 02m 40s.xml">
+    <history-entry file="MapStorageTest - 2018.03.07 at 13h 18m 43s.xml">
       <configuration name="MapStorageTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84511000" />
+    <option name="totallyTimeSpent" value="88466000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -844,17 +857,19 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29904053" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="782" y="58" width="356" height="924" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -865,9 +880,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -897,11 +910,12 @@
     <MESSAGE value="CollectionStorage implementation" />
     <MESSAGE value="refactoring" />
     <MESSAGE value="update AbstractStorage" />
-    <option name="LAST_COMMIT_MESSAGE" value="update AbstractStorage" />
+    <MESSAGE value="refactoring Resume" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring Resume" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
@@ -910,10 +924,36 @@
         <watch expression="expected.getClass()" language="JAVA" />
         <watch expression="storage.getAllSorted()" language="JAVA" />
       </configuration>
+      <configuration name="Application">
+        <watch expression="v.getClass()" language="JAVA" />
+        <watch expression="v.getClass().classLoader" language="JAVA" />
+        <watch expression="v.getClass().getTypeParameters()" language="JAVA" />
+        <watch expression="v.getClass().genericInfo" language="JAVA" />
+      </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>v.getClass().genericInfo</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>v.getClass().getTypeParameters()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>v.getClass().classLoader</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>v.getClass()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>storage.getAllSorted()</expression-string>
         <language-id>JAVA</language-id>
@@ -959,27 +999,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/util/SortedMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="112" column="17" lean-forward="false" selection-start-line="112" selection-start-column="17" selection-end-line="112" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/com/sun/jmx/mbeanserver/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="35" column="25" lean-forward="false" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/util/LinkedHashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="163" column="15" lean-forward="false" selection-start-line="163" selection-start-column="15" selection-end-line="163" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/util/AbstractMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -1100,13 +1119,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="77" column="58" lean-forward="false" selection-start-line="77" selection-start-column="58" selection-end-line="77" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/javafx-src.zip!/com/sun/glass/ui/monocle/RunnableQueue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="386">
@@ -1160,13 +1172,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="147" column="19" lean-forward="false" selection-start-line="147" selection-start-column="19" selection-end-line="147" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1264,93 +1269,151 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/MapStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#305#306#0" expanded="true" />
-            <element signature="e#329#330#0" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-            <element signature="e#557#558#0" expanded="true" />
-            <element signature="e#780#781#0" expanded="true" />
-            <element signature="e#809#810#0" expanded="true" />
-            <element signature="e#861#862#0" expanded="true" />
-            <element signature="e#902#903#0" expanded="true" />
-            <element signature="e#1146#1147#0" expanded="true" />
-            <element signature="e#1164#1165#0" expanded="true" />
-            <element signature="e#1197#1198#0" expanded="true" />
-            <element signature="e#1228#1229#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/util/Collections.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
           <caret line="4820" column="55" lean-forward="true" selection-start-line="4820" selection-start-column="55" selection-end-line="4820" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/AbstractStorageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1900#1901#0" expanded="true" />
-            <element signature="e#1928#1929#0" expanded="true" />
+            <element signature="e#186747#186748#0" expanded="false" />
+            <element signature="e#186792#186793#0" expanded="false" />
+            <element signature="e#187662#187663#0" expanded="false" />
+            <element signature="e#187708#187709#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/MapStorageTest.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/lang/Class.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="226">
+          <caret line="641" column="36" lean-forward="false" selection-start-line="641" selection-start-column="36" selection-end-line="641" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/AbstractStorage.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="55" column="23" lean-forward="false" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="243">
+          <caret line="235" column="29" lean-forward="false" selection-start-line="235" selection-start-column="29" selection-end-line="235" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/model/Resume.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="448">
+          <caret line="55" column="18" lean-forward="false" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
-            <element signature="e#518#519#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#457#458#0" expanded="false" />
+            <element signature="e#518#519#0" expanded="false" />
+            <element signature="e#1192#1193#0" expanded="false" />
+            <element signature="e#1214#1215#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/lang/Number.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-351">
+          <caret line="54" column="22" lean-forward="false" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="341" column="18" lean-forward="false" selection-start-line="341" selection-start-column="18" selection-end-line="341" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/ArrayStorageTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="68">
+          <caret line="4" column="48" lean-forward="true" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/ArrayStorage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="296">
+          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1392#1393#0" expanded="true" />
-            <element signature="e#1426#1427#0" expanded="true" />
+            <element signature="e#1073#1074#0" expanded="true" />
+            <element signature="e#1128#1129#0" expanded="true" />
+            <element signature="e#1597#1598#0" expanded="true" />
+            <element signature="e#1631#1632#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/AbstractStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="37" column="12" lean-forward="true" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/MapStorageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/javawebinar/webapp/storage/MapStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#255#256#0" expanded="true" />
+            <element signature="e#285#286#0" expanded="true" />
+            <element signature="e#337#338#0" expanded="true" />
+            <element signature="e#372#373#0" expanded="true" />
+            <element signature="e#412#413#0" expanded="true" />
+            <element signature="e#430#431#0" expanded="true" />
+            <element signature="e#479#480#0" expanded="true" />
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+            <element signature="e#588#589#0" expanded="true" />
+            <element signature="e#640#641#0" expanded="true" />
+            <element signature="e#663#664#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#755#756#0" expanded="true" />
+            <element signature="e#788#789#0" expanded="true" />
+            <element signature="e#812#813#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ru/javawebinar/webapp/storage/AbstractStorageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2238#2239#0" expanded="true" />
+            <element signature="e#2266#2267#0" expanded="true" />
+            <element signature="e#2340#2341#0" expanded="true" />
+            <element signature="e#2368#2369#0" expanded="true" />
+            <element signature="e#2847#2848#0" expanded="true" />
+            <element signature="e#2892#2893#0" expanded="true" />
           </folding>
         </state>
       </provider>

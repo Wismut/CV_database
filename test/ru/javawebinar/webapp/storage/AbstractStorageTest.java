@@ -8,6 +8,7 @@ import ru.javawebinar.webapp.WebAppException;
 import ru.javawebinar.webapp.model.Contact;
 import ru.javawebinar.webapp.model.ContactType;
 import ru.javawebinar.webapp.model.Resume;
+import sun.awt.windows.WEmbeddedFrame;
 
 import java.util.Arrays;
 
@@ -49,6 +50,13 @@ public abstract class AbstractStorageTest {
 		Assert.assertEquals(R1, storage.load(R1.getUuid()));
 	}
 
+	@Test(expected = WebAppException.class)
+	public void saveAlreadyPresent() {
+		storage.clear();
+		storage.save(R1);
+		storage.save(R1);
+	}
+
 	@org.junit.Test
 	public void update() {
 		R2.setFullName("new full name");
@@ -57,12 +65,23 @@ public abstract class AbstractStorageTest {
 		Assert.assertEquals(R2.getLocation(), storage.load(R2.getUuid()).getLocation());
 	}
 
+	@Test(expected = WebAppException.class)
+	public void updateNotFound() {
+		Resume resume = new Resume("dfgrd", "dfger", "fghedf");
+		storage.update(resume);
+	}
+
 	@org.junit.Test
 	public void load() {
 		Resume resume = storage.load(R3.getUuid());
 		Assert.assertEquals(R3.getLocation(), resume.getLocation());
 		Assert.assertEquals(R3.getFullName(), resume.getFullName());
 		Assert.assertEquals(R3.getUuid(), resume.getUuid());
+	}
+
+	@Test(expected = WebAppException.class)
+	public void loadNotFound() {
+		storage.load("retro");
 	}
 
 	@Test(expected = WebAppException.class)
@@ -87,6 +106,6 @@ public abstract class AbstractStorageTest {
 
 	@org.junit.Test
 	public void size() {
-//		Assert.assertEquals(3, storage.size());
+		Assert.assertEquals(3, storage.size());
 	}
 }

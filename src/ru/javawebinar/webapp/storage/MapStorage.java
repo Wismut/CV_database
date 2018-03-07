@@ -1,6 +1,6 @@
 package ru.javawebinar.webapp.storage;
 
-import ru.javawebinar.webapp.WebAppException;
+
 import ru.javawebinar.webapp.model.Resume;
 
 
@@ -8,63 +8,45 @@ import java.util.*;
 
 public class MapStorage extends AbstractStorage {
 
-	public Collection<Resume> resumeList = new HashSet<>();
+	private Map<String, Resume> map = new HashMap<>();
 
 	@Override
 	protected void doSave(Resume r) {
-		resumeList.add(r);
+		map.put(r.getUuid(), r);
 	}
 
 	@Override
 	protected boolean exist(String uuid) {
-		for (Resume resume : resumeList) {
-			if (resume.getUuid().equals(uuid)) return true;
-		}
-		return false;
+		return map.containsKey(uuid);
 	}
 
 	@Override
 	protected void doClear() {
-		resumeList.clear();
+		map.clear();
 	}
 
 	@Override
 	protected void doUpdate(Resume r) {
-		if (!resumeList.contains(r)) throw new WebAppException("Resume " + r.getUuid() + " not found");
-		resumeList.add(r);
+		map.put(r.getUuid(), r);
 	}
 
 	@Override
 	protected Resume doLoad(String uuid) {
-		return getByUuid(uuid);
+		return map.get(uuid);
 	}
 
 	@Override
 	protected void doDelete(String uuid) {
-		resumeList.remove(getByUuid(uuid));
-	}
-
-	@Override
-	public Collection<Resume> getAllSorted() {
-		Set<Resume> sortedSet = new TreeSet<>(Comparator.comparing(Resume::getFullName));
-		sortedSet.addAll(resumeList);
-		return sortedSet;
+		map.remove(uuid);
 	}
 
 	@Override
 	protected List<Resume> doGetAll() {
-		return null;
+		return new ArrayList<>(map.values());
 	}
 
 	@Override
 	public int size() {
-		return resumeList.size();
-	}
-
-	private Resume getByUuid(String uuid) {
-		for (Resume resume : resumeList) {
-			if (resume.getUuid().equals(uuid)) return resume;
-		}
-		throw new WebAppException("Resume " + uuid + " not found");
+		return map.size();
 	}
 }
