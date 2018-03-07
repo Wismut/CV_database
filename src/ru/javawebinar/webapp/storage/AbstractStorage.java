@@ -6,6 +6,7 @@ import ru.javawebinar.webapp.model.Resume;
 
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -62,7 +63,14 @@ public abstract class AbstractStorage implements IStorage {
 	public Collection<Resume> getAllSorted() {
 		logger.info("Get sorted resumes");
 		List<Resume> resumes = doGetAll();
-		Collections.sort(resumes);
+		Collections.sort(resumes, new Comparator<Resume>() {
+			@Override
+			public int compare(Resume o1, Resume o2) {
+				int nameCmp = o1.getFullName().compareTo(o2.getFullName());
+				if (nameCmp != 0) return nameCmp;
+				return 0;
+			}
+		});
 		return resumes;
 //		return Collections.singletonList(new Resume());
 	}

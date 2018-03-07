@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
-public final class Resume implements Comparable<Resume> {
+public final class Resume {//implements Comparable<Resume> {
 	private String uuid;
 	private String fullName;
 	private String location;
@@ -24,6 +24,7 @@ public final class Resume implements Comparable<Resume> {
 
 	@Override
 	public boolean equals(Object o) {
+		System.out.println(12345);
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 		Resume resume = (Resume) o;
@@ -85,7 +86,7 @@ public final class Resume implements Comparable<Resume> {
 		this.homePage = homePage;
 	}
 
-	@Override
+	//	@Override
 	public int compareTo(Resume o) {
 		return fullName.compareTo(o.fullName);
 	}

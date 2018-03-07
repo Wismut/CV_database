@@ -11,6 +11,9 @@ import ru.javawebinar.webapp.model.Resume;
 import sun.awt.windows.WEmbeddedFrame;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public abstract class AbstractStorageTest {
 	private Resume R1, R2, R3;
@@ -30,7 +33,7 @@ public abstract class AbstractStorageTest {
 		R2 = new Resume("полное имя2", null);
 		R2.addContact(new Contact(ContactType.MAIL, "eredrfgedfg@dfg.com"));
 		R2.addContact(new Contact(ContactType.PHONE, "2344564553455"));
-		R3 = new Resume("полное имяr564553", null);
+		R3 = new Resume("полное имя3", null);
 		storage.clear();
 		storage.save(R1);
 		storage.save(R2);
@@ -89,23 +92,32 @@ public abstract class AbstractStorageTest {
 		storage.load("dummy");
 	}
 
-	@org.junit.Test(expected = WebAppException.class)
+	@org.junit.Test
 	public void delete() {
 		storage.delete(R1.getUuid());
 		Assert.assertEquals(2, storage.size());
 		Assert.assertEquals(R2, storage.load(R2.getUuid()));
-		storage.load(R1.getUuid());
 	}
 
 	@org.junit.Test
 	public void getAllSorted() {
-		Resume[] resumes = new Resume[]{R1, R3, R2};
-		Arrays.sort(resumes);
-		Assert.assertTrue(Arrays.equals(resumes, storage.getAllSorted().toArray()));
+		List<Resume> list = Arrays.asList(R1, R3, R2);
+		Collections.sort(list, new Comparator<Resume>() {
+			@Override
+			public int compare(Resume o1, Resume o2) {
+				return 0;
+			}
+		});
+		Assert.assertEquals(list, storage.getAllSorted());
+//		Resume[] resumes = new Resume[]{R1, R3, R2};
+//		Arrays.sort(resumes);
+//		Assert.assertTrue(Arrays.equals(resumes, storage.getAllSorted().toArray()));
 	}
 
 	@org.junit.Test
 	public void size() {
 		Assert.assertEquals(3, storage.size());
+		storage.clear();
+		Assert.assertEquals(0, storage.size());
 	}
 }
