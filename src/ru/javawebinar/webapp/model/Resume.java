@@ -1,17 +1,14 @@
 package ru.javawebinar.webapp.model;
 
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Objects;
-import java.util.UUID;
+import java.util.*;
 
 public final class Resume {//implements Comparable<Resume> {
 	private String uuid;
 	private String fullName;
 	private String location;
 	private String homePage;
-	private List<Contact> contacts = new LinkedList<>();
+	private Map<ContactType, String> contacts = new EnumMap<>(ContactType.class);
 	private List<Section> sections = new LinkedList<>();
 
 	public Resume(String fullName, String location) {
@@ -24,7 +21,6 @@ public final class Resume {//implements Comparable<Resume> {
 
 	@Override
 	public boolean equals(Object o) {
-		System.out.println(12345);
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 		Resume resume = (Resume) o;
@@ -46,8 +42,8 @@ public final class Resume {//implements Comparable<Resume> {
 		sections.add(section);
 	}
 
-	public void addContact(Contact contact) {
-		contacts.add(contact);
+	public void addContact(ContactType type, String value) {
+		contacts.put(type, value);
 	}
 
 	public String getUuid() {
@@ -66,7 +62,7 @@ public final class Resume {//implements Comparable<Resume> {
 		return homePage;
 	}
 
-	public List<Contact> getContacts() {
+	public Map<ContactType, String> getContacts() {
 		return contacts;
 	}
 

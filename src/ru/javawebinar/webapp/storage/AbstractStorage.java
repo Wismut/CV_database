@@ -4,10 +4,7 @@ package ru.javawebinar.webapp.storage;
 import ru.javawebinar.webapp.WebAppException;
 import ru.javawebinar.webapp.model.Resume;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.logging.Logger;
 
 public abstract class AbstractStorage implements IStorage {
