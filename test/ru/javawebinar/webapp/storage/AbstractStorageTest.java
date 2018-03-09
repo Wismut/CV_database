@@ -5,10 +5,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import ru.javawebinar.webapp.WebAppException;
-import ru.javawebinar.webapp.model.Contact;
 import ru.javawebinar.webapp.model.ContactType;
 import ru.javawebinar.webapp.model.Resume;
-import sun.awt.windows.WEmbeddedFrame;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -28,11 +26,11 @@ public abstract class AbstractStorageTest {
 	@Before
 	public void before() {
 		R1 = new Resume("полное имя1", "location1");
-		R1.addContact(new Contact(ContactType.MAIL, "erfg@dfg.com"));
-		R1.addContact(new Contact(ContactType.PHONE, "23453455"));
+		R1.addContact(ContactType.MAIL, "erfg@dfg.com");
+		R1.addContact(ContactType.PHONE, "23453455");
 		R2 = new Resume("полное имя2", null);
-		R2.addContact(new Contact(ContactType.MAIL, "eredrfgedfg@dfg.com"));
-		R2.addContact(new Contact(ContactType.PHONE, "2344564553455"));
+		R2.addContact(ContactType.MAIL, "eredrfgedfg@dfg.com");
+		R2.addContact(ContactType.PHONE, "2344564553455");
 		R3 = new Resume("полное имя3", null);
 		storage.clear();
 		storage.save(R1);
@@ -105,7 +103,9 @@ public abstract class AbstractStorageTest {
 		Collections.sort(list, new Comparator<Resume>() {
 			@Override
 			public int compare(Resume o1, Resume o2) {
-				return 0;
+				int cmp = o1.getFullName().compareTo(o2.getFullName());
+				if (cmp != 0) return cmp;
+				return o1.getUuid().compareTo(o2.getUuid());
 			}
 		});
 		Assert.assertEquals(list, storage.getAllSorted());

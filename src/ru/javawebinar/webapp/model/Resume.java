@@ -62,6 +62,10 @@ public final class Resume {//implements Comparable<Resume> {
 		return homePage;
 	}
 
+	public String getContact(ContactType type) {
+		return contacts.get(type);
+	}
+
 	public Map<ContactType, String> getContacts() {
 		return contacts;
 	}
