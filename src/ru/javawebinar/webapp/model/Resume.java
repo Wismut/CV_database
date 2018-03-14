@@ -3,7 +3,7 @@ package ru.javawebinar.webapp.model;
 
 import java.util.*;
 
-public final class Resume {//implements Comparable<Resume> {
+public class Resume {//implements Comparable<Resume> {
 	private String uuid;
 	private String fullName;
 	private String location;
@@ -16,7 +16,7 @@ public final class Resume {//implements Comparable<Resume> {
 	}
 
 	public Resume() {
-
+		uuid = UUID.randomUUID().toString();
 	}
 
 	@Override

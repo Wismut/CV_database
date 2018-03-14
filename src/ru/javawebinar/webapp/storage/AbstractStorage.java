@@ -2,25 +2,27 @@ package ru.javawebinar.webapp.storage;
 
 
 import ru.javawebinar.webapp.WebAppException;
-import ru.javawebinar.webapp.model.ContactType;
 import ru.javawebinar.webapp.model.Resume;
 
 import java.util.*;
 import java.util.logging.Logger;
 
-public abstract class AbstractStorage implements IStorage {
+public abstract class AbstractStorage<C> implements IStorage {
 	protected final Logger logger = Logger.getLogger(getClass().getName());
 
 	@Override
 	public void save(Resume r) throws WebAppException {
 		logger.info("Save resume with uuid = " + r.getUuid());
-		if (exist(r.getUuid())) throw new WebAppException("Resume " + r.getUuid() + " already exist");
-		doSave(r);
+		C context = getContext(r);
+		if (exist(context)) throw new WebAppException("Resume " + r.getUuid() + " already exist");
+		doSave(context, r);
 	}
 
-	protected abstract void doSave(Resume r);
+	protected abstract void doSave(C context, Resume r);
 
-	protected abstract boolean exist(String uuid);
+	protected abstract C getContext(String uuid);
+
+	protected abstract boolean exist(C context);
 
 	@Override
 	public void clear() {
@@ -33,29 +35,36 @@ public abstract class AbstractStorage implements IStorage {
 	@Override
 	public void update(Resume r) {
 		logger.info("Update resume with " + r.getUuid());
-		if (!exist(r.getUuid())) throw new WebAppException("Resume " + r.getUuid() + " not found");
-		doUpdate(r);
+		C context = getContext(r);
+		if (!exist(context)) throw new WebAppException("Resume " + r.getUuid() + " not found");
+		doUpdate(context, r);
 	}
 
-	protected abstract void doUpdate(Resume r);
+	protected abstract void doUpdate(C context, Resume r);
 
 	@Override
 	public Resume load(String uuid) {
 		logger.info("Load resume with " + uuid);
-		if (!exist(uuid)) throw new WebAppException("Resume " + uuid + " not found");
-		return doLoad(uuid);
+		C context = getContext(uuid);
+		if (!exist(context)) throw new WebAppException("Resume " + uuid + " not found");
+		return doLoad(context, uuid);
 	}
 
-	protected abstract Resume doLoad(String uuid);
+	public abstract Resume doLoad(C context, String uuid);
+
+	private C getContext(Resume resume) {
+		return getContext(resume.getUuid());
+	}
 
 	@Override
 	public void delete(String uuid) {
 		logger.info("Delete resume with " + uuid);
-		if (!exist(uuid)) throw new WebAppException("Resume " + uuid + " not found");
-		doDelete(uuid);
+		C context = getContext(uuid);
+		if (!exist(context)) throw new WebAppException("Resume " + uuid + " not found");
+		doDelete(context, uuid);
 	}
 
-	protected abstract void doDelete(String uuid);
+	protected abstract void doDelete(C context, String uuid);
 
 	@Override
 	public Collection<Resume> getAllSorted() {

@@ -6,46 +6,46 @@ import ru.javawebinar.webapp.model.Resume;
 
 import java.util.*;
 
-public class MapStorage extends AbstractStorage {
+public class MapStorage{ //extends AbstractStorage {
 
 	private Map<String, Resume> map = new HashMap<>();
 
-	@Override
-	protected void doSave(Resume r) {
+//	@Override
+	protected void doSave(int index, Resume r) {
 		map.put(r.getUuid(), r);
 	}
 
-	@Override
-	protected boolean exist(String uuid) {
-		return map.containsKey(uuid);
-	}
+//	@Override
+//	protected boolean exist(String uuid) {
+//		return map.containsKey(uuid);
+//	}
 
-	@Override
+//	@Override
 	protected void doClear() {
 		map.clear();
 	}
 
-	@Override
+//	@Override
 	protected void doUpdate(Resume r) {
 		map.put(r.getUuid(), r);
 	}
 
-	@Override
+//	@Override
 	protected Resume doLoad(String uuid) {
 		return map.get(uuid);
 	}
 
-	@Override
+//	@Override
 	protected void doDelete(String uuid) {
 		map.remove(uuid);
 	}
 
-	@Override
+//	@Override
 	protected List<Resume> doGetAll() {
 		return new ArrayList<>(map.values());
 	}
 
-	@Override
+//	@Override
 	public int size() {
 		return map.size();
 	}

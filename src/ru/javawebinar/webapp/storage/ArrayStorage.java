@@ -1,13 +1,11 @@
 package ru.javawebinar.webapp.storage;
 
-import ru.javawebinar.webapp.WebAppException;
 import ru.javawebinar.webapp.model.Resume;
 
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 
-public class ArrayStorage extends AbstractStorage {
+public class ArrayStorage extends AbstractStorage<Integer> {
 
 	private static final int LIMIT = 100;
 	private Resume[] array = new Resume[LIMIT];
@@ -21,31 +19,22 @@ public class ArrayStorage extends AbstractStorage {
 	}
 
 	@Override
-	protected void doUpdate(Resume r) {
-		int idx = getIndex(r.getUuid());
+	protected void doUpdate(Integer idx, Resume r) {
 		array[idx] = r;
 	}
 
 	@Override
-	public Resume doLoad(String uuid) {
-		int idx = getIndex(uuid);
+	public Resume doLoad(Integer idx, String uuid) {
 		return array[idx];
 	}
 
 	@Override
-	public void doDelete(String uuid) {
-		int idx = getIndex(uuid);
+	public void doDelete(Integer idx, String uuid) {
 		int numMoved = size - idx - 1;
 		if (numMoved > 0)
 			System.arraycopy(array, idx + 1, array, idx, numMoved);
 		array[--size] = null;
 	}
-
-//	@Override
-//	public Collection<Resume> getAllSorted() {
-//		Arrays.sort(array, 0, size);
-//		return Arrays.asList(Arrays.copyOf(array, size));
-//	}
 
 	@Override
 	protected List<Resume> doGetAll() {
@@ -61,7 +50,7 @@ public class ArrayStorage extends AbstractStorage {
 		return count;
 	}
 
-	private int getIndex(String uuid) {
+	public Integer getContext(String uuid) {
 		for (int i = 0; i < LIMIT; i++) {
 			if (array[i] != null && array[i].getUuid().equals(uuid))
 				return i;
@@ -70,13 +59,19 @@ public class ArrayStorage extends AbstractStorage {
 	}
 
 	@Override
-	protected void doSave(Resume r) {
-		int idx = getIndex(r.getUuid());
-		array[size++] = r;
+	protected boolean exist(Integer index) {
+		return index != -1;
 	}
 
 	@Override
-	protected boolean exist(String uuid) {
-		return getIndex(uuid) != -1;
+	protected void doSave(Integer idx, Resume r) {
+		idx = getContext(r.getUuid());
+		array[size++] = r;
 	}
+
+//	@Override
+//	protected boolean exist(String uuid) {
+//		idx = getContext(uuid);
+//		return idx != -1;
+//	}
 }
