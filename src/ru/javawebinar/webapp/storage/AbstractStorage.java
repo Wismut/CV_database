@@ -47,10 +47,10 @@ public abstract class AbstractStorage<C> implements IStorage {
 		logger.info("Load resume with " + uuid);
 		C context = getContext(uuid);
 		if (!exist(context)) throw new WebAppException("Resume " + uuid + " not found");
-		return doLoad(context, uuid);
+		return doLoad(context);
 	}
 
-	public abstract Resume doLoad(C context, String uuid);
+	public abstract Resume doLoad(C context);
 
 	private C getContext(Resume resume) {
 		return getContext(resume.getUuid());
@@ -61,10 +61,10 @@ public abstract class AbstractStorage<C> implements IStorage {
 		logger.info("Delete resume with " + uuid);
 		C context = getContext(uuid);
 		if (!exist(context)) throw new WebAppException("Resume " + uuid + " not found");
-		doDelete(context, uuid);
+		doDelete(context);
 	}
 
-	protected abstract void doDelete(C context, String uuid);
+	protected abstract void doDelete(C context);
 
 	@Override
 	public Collection<Resume> getAllSorted() {

@@ -36,13 +36,13 @@ public class MapStorage extends AbstractStorage<String> {
 	}
 
 	@Override
-	public Resume doLoad(String context, String uuid) {
-		return map.get(uuid);
+	public Resume doLoad(String context) {
+		return map.get(context);
 	}
 
 	@Override
-	protected void doDelete(String context, String uuid) {
-		map.remove(uuid);
+	protected void doDelete(String context) {
+		map.remove(context);
 	}
 
 	@Override
