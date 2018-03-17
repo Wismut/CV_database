@@ -11,7 +11,7 @@ public class MapStorage extends AbstractStorage<String> {
 	private Map<String, Resume> map = new HashMap<>();
 
 	@Override
-	protected void doSave(String context, Resume r) {
+	protected void doSave(String uuid, Resume r) {
 		map.put(r.getUuid(), r);
 	}
 
@@ -21,8 +21,8 @@ public class MapStorage extends AbstractStorage<String> {
 	}
 
 	@Override
-	protected boolean exist(String context) {
-		return map.containsKey(context);
+	protected boolean exist(String uuid) {
+		return map.containsKey(uuid);
 	}
 
 	@Override
@@ -31,18 +31,18 @@ public class MapStorage extends AbstractStorage<String> {
 	}
 
 	@Override
-	protected void doUpdate(String context, Resume r) {
+	protected void doUpdate(String uuid, Resume r) {
 		map.put(r.getUuid(), r);
 	}
 
 	@Override
-	public Resume doLoad(String context) {
-		return map.get(context);
+	public Resume doLoad(String uuid) {
+		return map.get(uuid);
 	}
 
 	@Override
-	protected void doDelete(String context) {
-		map.remove(context);
+	protected void doDelete(String uuid) {
+		map.remove(uuid);
 	}
 
 	@Override
