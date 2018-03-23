@@ -11,6 +11,15 @@ public class Resume {//implements Comparable<Resume> {
 	private Map<ContactType, String> contacts = new EnumMap<>(ContactType.class);
 	private Map<SectionType, Section> sections = new EnumMap<>(SectionType.class);
 
+	public static final Resume EMPTY;
+
+	static {
+		EMPTY = new Resume();
+		for (SectionType type : SectionType.values()) {
+			// TODO: 23.03.2018
+		}
+	}
+
 	public Resume(String fullName, String location) {
 		this(UUID.randomUUID().toString(), fullName, location);
 	}
