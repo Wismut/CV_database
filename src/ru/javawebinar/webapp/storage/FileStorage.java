@@ -3,36 +3,61 @@ package ru.javawebinar.webapp.storage;
 import ru.javawebinar.webapp.WebAppException;
 import ru.javawebinar.webapp.model.Resume;
 
-import java.util.Collection;
+import java.io.File;
+import java.util.List;
 
-public class FileStorage implements IStorage {
+public class FileStorage extends AbstractStorage<File> {
+
+	private File dir;
+
+	public FileStorage(String path) {
+		this.dir = new File(path);
+		if (!dir.isDirectory() || !dir.canWrite())
+			throw new IllegalArgumentException("'" + path + "' is not a directory or is not writable");
+	}
+
 	@Override
-	public void clear() {
+	protected void doSave(File context, Resume r) {
 
 	}
 
 	@Override
-	public void save(Resume r) throws WebAppException {
+	protected File getContext(String fileName) {
+		return new File(fileName);
+	}
+
+	@Override
+	protected boolean exist(File file) {
+		return file.exists();
+	}
+
+	@Override
+	protected void doClear() {
+		File[] files = dir.listFiles();
+		if (files == null) return;
+		for (File file : files) {
+			doDelete(file);
+		}
+	}
+
+	@Override
+	protected void doUpdate(File context, Resume r) {
 
 	}
 
 	@Override
-	public void update(Resume r) {
-
-	}
-
-	@Override
-	public Resume load(String uuid) {
+	public Resume doLoad(File context) {
 		return null;
 	}
 
 	@Override
-	public void delete(String uuid) {
-
+	protected void doDelete(File file) {
+		if (file.delete())
+			throw new WebAppException("File " + file.getAbsolutePath() + " can not be deleted");
 	}
 
 	@Override
-	public Collection<Resume> getAllSorted() {
+	protected List<Resume> doGetAll() {
 		return null;
 	}
 
