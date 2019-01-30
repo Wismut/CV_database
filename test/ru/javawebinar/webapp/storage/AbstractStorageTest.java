@@ -100,13 +100,10 @@ public abstract class AbstractStorageTest {
 	@org.junit.Test
 	public void getAllSorted() {
 		List<Resume> list = Arrays.asList(R1, R3, R2);
-		Collections.sort(list, new Comparator<Resume>() {
-			@Override
-			public int compare(Resume o1, Resume o2) {
-				int cmp = o1.getFullName().compareTo(o2.getFullName());
-				if (cmp != 0) return cmp;
-				return o1.getUuid().compareTo(o2.getUuid());
-			}
+		list.sort((o1, o2) -> {
+			int cmp = o1.getFullName().compareTo(o2.getFullName());
+			if (cmp != 0) return cmp;
+			return o1.getUuid().compareTo(o2.getUuid());
 		});
 		Assert.assertEquals(list, storage.getAllSorted());
 //		Resume[] resumes = new Resume[]{R1, R3, R2};
