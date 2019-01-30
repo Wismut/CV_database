@@ -7,6 +7,7 @@ import ru.javawebinar.webapp.model.Section;
 import ru.javawebinar.webapp.model.SectionType;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
@@ -37,7 +38,9 @@ public class FileStorage extends AbstractStorage<File> {
             dos.writeUTF(r.getFullName());
             dos.writeUTF(r.getLocation());
             dos.writeUTF(r.getHomePage());
-            for (Map.Entry<ContactType, String> contact : r.getContacts().entrySet()) {
+            Map<ContactType, String> contacts = r.getContacts();
+            dos.writeInt(contacts.size());
+            for (Map.Entry<ContactType, String> contact : contacts.entrySet()) {
                 dos.writeInt(contact.getKey().ordinal());
                 dos.writeUTF(contact.getValue());
             }
@@ -57,6 +60,11 @@ public class FileStorage extends AbstractStorage<File> {
             r.setLocation(dis.readUTF());
             r.setHomePage(dis.readUTF());
             Map<ContactType, String> contacts = new EnumMap<>(ContactType.class);
+            int size = dis.readInt();
+            for (int i = 0; i < size; i++) {
+                contacts.put(ContactType.VALUES[size], dis.readUTF());
+            }
+            r.setContacts(contacts);
             // TODO: 1/30/2019
         } catch (IOException e) {
 
@@ -102,11 +110,22 @@ public class FileStorage extends AbstractStorage<File> {
     @Override
     protected List<Resume> doGetAll() {
         File[] files = dir.listFiles();
-        return null;
+        List<Resume> resumeList = new ArrayList<>();
+        if (files == null) {
+            return resumeList;
+        }
+        for (File file : files) {
+            resumeList.add(doLoad(file));
+        }
+        return resumeList;
     }
 
     @Override
     public int size() {
-        return 0;
+        String[] list = dir.list();
+        if (list == null) {
+            throw new WebAppException("Couldn't read directory " + dir.getAbsolutePath());
+        }
+        return list.length;
     }
 }

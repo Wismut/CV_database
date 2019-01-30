@@ -1,9 +1,13 @@
 package ru.javawebinar.webapp.model;
 
 
+import java.io.Serializable;
 import java.util.*;
 
-public class Resume {//implements Comparable<Resume> {
+
+public class Resume implements Serializable {
+	static final long serialVersionUID = 1L;
+
 	private String uuid;
 	private String fullName;
 	private String location;
@@ -102,6 +106,14 @@ public class Resume {//implements Comparable<Resume> {
 	//	@Override
 	public int compareTo(Resume o) {
 		return fullName.compareTo(o.fullName);
+	}
+
+	public void setContacts(Map<ContactType, String> contacts) {
+		this.contacts = contacts;
+	}
+
+	public void setSections(Map<SectionType, Section> sections) {
+		this.sections = sections;
 	}
 
 	@Override
