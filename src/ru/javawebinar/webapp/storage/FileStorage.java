@@ -33,7 +33,7 @@ public abstract class FileStorage extends AbstractStorage<File> {
 
     @Override
     protected File getContext(String fileName) {
-        return new File(fileName);
+        return new File(dir, fileName);
     }
 
     @Override
@@ -62,7 +62,7 @@ public abstract class FileStorage extends AbstractStorage<File> {
 
     @Override
     protected void doDelete(File file) {
-        if (file.delete())
+        if (!file.delete())
             throw new WebAppException("File " + file.getAbsolutePath() + " can not be deleted");
     }
 

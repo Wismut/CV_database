@@ -28,10 +28,10 @@ public abstract class AbstractStorageTest {
 		R1 = new Resume("полное имя1", "location1");
 		R1.addContact(ContactType.MAIL, "erfg@dfg.com");
 		R1.addContact(ContactType.PHONE, "23453455");
-		R2 = new Resume("полное имя2", null);
+		R2 = new Resume("полное имя2", "location2");
 		R2.addContact(ContactType.MAIL, "eredrfgedfg@dfg.com");
 		R2.addContact(ContactType.PHONE, "2344564553455");
-		R3 = new Resume("полное имя3", null);
+		R3 = new Resume("полное имя3", "location3");
 		storage.clear();
 		storage.save(R1);
 		storage.save(R2);
@@ -62,6 +62,7 @@ public abstract class AbstractStorageTest {
 	public void update() {
 		R2.setFullName("new full name");
 		R2.setLocation("loca");
+		storage.update(R2);
 		Assert.assertEquals(R2.getFullName(), storage.load(R2.getUuid()).getFullName());
 		Assert.assertEquals(R2.getLocation(), storage.load(R2.getUuid()).getLocation());
 	}
