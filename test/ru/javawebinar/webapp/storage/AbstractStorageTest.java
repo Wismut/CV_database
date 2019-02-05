@@ -7,6 +7,7 @@ import org.junit.Test;
 import ru.javawebinar.webapp.WebAppException;
 import ru.javawebinar.webapp.model.ContactType;
 import ru.javawebinar.webapp.model.Resume;
+import ru.javawebinar.webapp.model.SectionType;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -28,14 +29,17 @@ public abstract class AbstractStorageTest {
 		R1 = new Resume("полное имя1", "location1");
 		R1.addContact(ContactType.MAIL, "erfg@dfg.com");
 		R1.addContact(ContactType.PHONE, "23453455");
-		R2 = new Resume("полное имя2", "location2");
+		R2 = new Resume("полное имя2", null);
 		R2.addContact(ContactType.MAIL, "eredrfgedfg@dfg.com");
 		R2.addContact(ContactType.PHONE, "2344564553455");
-		R3 = new Resume("полное имя3", "location3");
+		R3 = new Resume("полное имя3", null);
 		storage.clear();
 		storage.save(R1);
 		storage.save(R2);
 		storage.save(R3);
+		R1.addObjective("Objective1");
+		R1.addMultiTextSection(SectionType.ACHIEVEMENT, "Achievement1", "Achievement2");
+		R1.addMultiTextSection(SectionType.QUALIFICATIONS, "Java", "SQL");
 	}
 
 	@org.junit.Test

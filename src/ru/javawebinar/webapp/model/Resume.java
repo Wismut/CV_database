@@ -32,6 +32,10 @@ public class Resume implements Serializable {
 		uuid = UUID.randomUUID().toString();
 	}
 
+	public Resume(String uuid) {
+		this.uuid = uuid;
+	}
+
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
@@ -115,6 +119,18 @@ public class Resume implements Serializable {
 	public void setSections(Map<SectionType, Section> sections) {
 		this.sections = sections;
 	}
+
+	public void addObjective(String value) {
+		addSection(SectionType.OBJECTIVE, new TextSection(value));
+	}
+
+	public void addMultiTextSection(SectionType type, String... values) {
+		addSection(type, new MultiTextSection(values));
+	}
+
+//	public void setUuid(String uuid) {
+//		this.uuid = uuid;
+//	}
 
 	@Override
 	public String toString() {
