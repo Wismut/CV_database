@@ -1,11 +1,11 @@
 package ru.javawebinar.webapp.storage;
 
+import com.sun.xml.internal.bind.annotation.OverrideAnnotationOf;
 import ru.javawebinar.webapp.WebAppException;
 import ru.javawebinar.webapp.model.*;
 
 import java.io.*;
-import java.util.EnumMap;
-import java.util.Map;
+import java.util.*;
 
 public class DataStreamFileStorage extends FileStorage {
 
@@ -15,18 +15,19 @@ public class DataStreamFileStorage extends FileStorage {
         super(path);
     }
 
-    protected void write(File file, Resume r) {
-        try (FileOutputStream fos = new FileOutputStream(file);
-             DataOutputStream dos = new DataOutputStream(fos)) {
+    @Override
+    protected void write(OutputStream os, Resume r) throws IOException {
+//        try (FileOutputStream fos = new FileOutputStream(os);
+        try (DataOutputStream dos = new DataOutputStream(os)) {
+            writeString(dos, r.getUuid());
             writeString(dos, r.getFullName());
             writeString(dos, r.getLocation());
             writeString(dos, r.getHomePage());
             Map<ContactType, String> contacts = r.getContacts();
-            dos.writeInt(contacts.size());
-            for (Map.Entry<ContactType, String> contact : contacts.entrySet()) {
-                dos.writeInt(contact.getKey().ordinal());
-                writeString(dos, contact.getValue());
-            }
+            writeCollection(dos, contacts.entrySet(), entry -> {
+                dos.writeInt(entry.getKey().ordinal());
+                writeString(dos, entry.getValue());
+            });
             Map<SectionType, Section> sections = r.getSections();
             dos.writeInt(sections.size());
             for (Map.Entry<SectionType, Section> entry : sections.entrySet()) {
@@ -35,30 +36,30 @@ public class DataStreamFileStorage extends FileStorage {
                 writeString(dos, type.name());
                 switch (type) {
                     case OBJECTIVE:
-                        writeString(dos, ((TextSection) section).getValue());
+//                        writeString(dos, ((TextSection) section).getValue());
                         break;
                     case ACHIEVEMENT:
-                        writeString(dos, ((TextSection) section).getValue());
+//                        writeString(dos, ((TextSection) section).getValue());
                         break;
                     case QUALIFICATIONS:
-                        writeString(dos, ((TextSection) section).getValue());
+                        writeCollection(dos, ((MultiTextSection) section).getValues(), value -> writeString(dos, value));
                         break;
                     case EXPERIENCE:
-                        writeString(dos, ((TextSection) section).getValue());
+//                        writeString(dos, ((TextSection) section).getValue());
                         break;
                     case EDUCATION:
-                        writeString(dos, ((TextSection) section).getValue());
+//                        writeString(dos, ((TextSection) section).getValue());
                         break;
                 }
             }
-        } catch (IOException e) {
-            throw new WebAppException("Couldn't write file " + file.getAbsolutePath(), r, e);
         }
     }
 
-    protected Resume read(File file) {
-        Resume r = new Resume(file.getName());
-        try (InputStream is  = new FileInputStream(file); DataInputStream dis = new DataInputStream(is)) {
+    @Override
+    protected Resume read(InputStream is) throws IOException {
+        Resume r = new Resume();
+        try (DataInputStream dis = new DataInputStream(is)) {
+            r.setUuid(readString(dis));
             r.setFullName(readString(dis));
             r.setLocation(readString(dis));
             r.setHomePage(readString(dis));
@@ -68,11 +69,26 @@ public class DataStreamFileStorage extends FileStorage {
                 contacts.put(ContactType.VALUES[size], readString(dis));
             }
             r.setContacts(contacts);
+            final int sectionSize = dis.readInt();
+            for (int i = 0; i < sectionSize; i++) {
+                SectionType sectionType = SectionType.valueOf(readString(dis));
+                switch (sectionType) {
+                    case OBJECTIVE:
+                       r.addObjective(readString(dis));
+                        break;
+                    case ACHIEVEMENT:
+                    case QUALIFICATIONS:
+                        r.addSection(sectionType, new MultiTextSection(readList(dis, () -> readString(dis))));
+                        break;
+                    case EXPERIENCE:
+                    case EDUCATION:
+//                        writeString(dos, ((TextSection) section).getValue());
+                        break;
+                }
+            }
+            return r;
             // TODO: 1/30/2019
-        } catch (IOException e) {
-            throw new WebAppException("Couldn't read file " + file.getAbsolutePath(), r, e);
         }
-        return r;
     }
 
     private void writeString(DataOutputStream dos, String string) throws IOException {
@@ -82,6 +98,30 @@ public class DataStreamFileStorage extends FileStorage {
     private String readString(DataInputStream dis) throws IOException {
         String str = dis.readUTF();
         return str.equals(NULL) ? null : str;
+    }
+
+    private interface ElementWriter<T> {
+        void write(T t) throws IOException;
+    }
+
+    private <T> void writeCollection(DataOutputStream dos, Collection<T> collection, ElementWriter<T> writer) throws IOException {
+        dos.writeInt(collection.size());
+        for (T item : collection) {
+            writer.write(item);
+        }
+    }
+
+    private interface ElementReader<T> {
+        T read() throws IOException;
+    }
+
+    private <T> List<T> readList(DataInputStream dis, ElementReader<T> reader) throws IOException {
+        int size = dis.readInt();
+        List<T> list = new ArrayList<>();
+        for (int i = 0; i < size; i++) {
+            list.add(reader.read());
+        }
+        return list;
     }
 
 }

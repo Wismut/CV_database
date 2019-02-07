@@ -128,9 +128,9 @@ public class Resume implements Serializable {
 		addSection(type, new MultiTextSection(values));
 	}
 
-//	public void setUuid(String uuid) {
-//		this.uuid = uuid;
-//	}
+	public void setUuid(String uuid) {
+		this.uuid = uuid;
+	}
 
 	@Override
 	public String toString() {

@@ -12,4 +12,12 @@ public class MultiTextSection extends Section implements Serializable {
     public MultiTextSection(String[] values) {
         this.values = Arrays.asList(values);
     }
+
+    public MultiTextSection(List<String> values) {
+        this.values = values;
+    }
+
+    public List<String> getValues() {
+        return values;
+    }
 }

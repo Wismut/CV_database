@@ -29,6 +29,9 @@ public abstract class AbstractStorageTest {
 		R1 = new Resume("полное имя1", "location1");
 		R1.addContact(ContactType.MAIL, "erfg@dfg.com");
 		R1.addContact(ContactType.PHONE, "23453455");
+		R1.addObjective("Objective1");
+		R1.addMultiTextSection(SectionType.ACHIEVEMENT, "Achievement1", "Achievement2");
+		R1.addMultiTextSection(SectionType.QUALIFICATIONS, "Java", "SQL");
 		R2 = new Resume("полное имя2", null);
 		R2.addContact(ContactType.MAIL, "eredrfgedfg@dfg.com");
 		R2.addContact(ContactType.PHONE, "2344564553455");
@@ -37,9 +40,6 @@ public abstract class AbstractStorageTest {
 		storage.save(R1);
 		storage.save(R2);
 		storage.save(R3);
-		R1.addObjective("Objective1");
-		R1.addMultiTextSection(SectionType.ACHIEVEMENT, "Achievement1", "Achievement2");
-		R1.addMultiTextSection(SectionType.QUALIFICATIONS, "Java", "SQL");
 	}
 
 	@org.junit.Test
