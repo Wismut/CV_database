@@ -6,9 +6,12 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import ru.javawebinar.webapp.WebAppException;
 import ru.javawebinar.webapp.model.ContactType;
+import ru.javawebinar.webapp.model.Organization;
 import ru.javawebinar.webapp.model.Resume;
 import ru.javawebinar.webapp.model.SectionType;
 
+import java.time.LocalDate;
+import java.time.Month;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
@@ -32,6 +35,16 @@ public abstract class AbstractStorageTest {
 		R1.addObjective("Objective1");
 		R1.addMultiTextSection(SectionType.ACHIEVEMENT, "Achievement1", "Achievement2");
 		R1.addMultiTextSection(SectionType.QUALIFICATIONS, "Java", "SQL");
+//		R1.addOrganizationSection(SectionType.EXPERIENCE,
+//				new Organization("Organization11", null,
+//						new Organization.Period(LocalDate.of(2005, Month.JANUARY, 1), Organization.Period.NOW, "position1", "content1"),
+//						new Organization.Period(2001, Month.MARCH, 2005, Month.JANUARY, "position2", "content2")),
+//				new Organization("Organization12", "www.com"));
+//		R1.addOrganizationSection(SectionType.EDUCATION,
+//				new Organization("Organization11", null,
+//						new Organization.Period(2005, Month.JANUARY, 2000, Month.DECEMBER, "position1", null),
+//						new Organization.Period(2001, Month.MARCH, 2005, Month.JANUARY, "position2", "content2")),
+//				new Organization("Organization12", "www.com"));
 		R2 = new Resume("полное имя2", null);
 		R2.addContact(ContactType.MAIL, "eredrfgedfg@dfg.com");
 		R2.addContact(ContactType.PHONE, "2344564553455");

@@ -29,7 +29,7 @@ public class Resume implements Serializable {
 	}
 
 	public Resume() {
-		uuid = UUID.randomUUID().toString();
+//		uuid = UUID.randomUUID().toString();
 	}
 
 	public Resume(String uuid) {
@@ -126,6 +126,10 @@ public class Resume implements Serializable {
 
 	public void addMultiTextSection(SectionType type, String... values) {
 		addSection(type, new MultiTextSection(values));
+	}
+
+	public void addOrganizationSection(SectionType type, Organization... organizations) {
+		addSection(type, new OrganizationSection(organizations));
 	}
 
 	public void setUuid(String uuid) {
