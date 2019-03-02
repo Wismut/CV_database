@@ -1,15 +1,21 @@
 package ru.javawebinar.webapp.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
 
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Organization implements Serializable {
 	static final long serialVersionUID = 1L;
 
 	private Link link;
 	private List<Period> periods;
+
+	public Organization() {
+	}
 
 	public Organization(String organization12, String s) {
 	}
@@ -19,6 +25,11 @@ public class Organization implements Serializable {
 		this.periods = periods;
 	}
 
+	public Organization(String organization, String location, Period periodFrom, Period periodTo) {
+
+	}
+
+	@XmlAccessorType(XmlAccessType.FIELD)
 	public static class Period implements Serializable {
 		static final long serialVersionUID = 1L;
 
