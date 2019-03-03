@@ -1,23 +1,20 @@
 package ru.javawebinar.webapp.storage;
 
-import com.sun.xml.internal.bind.annotation.OverrideAnnotationOf;
-import ru.javawebinar.webapp.WebAppException;
+
 import ru.javawebinar.webapp.model.*;
 
 import java.io.*;
+import java.time.LocalDate;
+import java.time.Month;
 import java.util.*;
 
 public class DataStreamFileStorage extends FileStorage {
-
-    private static final String NULL = "null";
-
     public DataStreamFileStorage(String path) {
         super(path);
     }
 
     @Override
     protected void write(OutputStream os, Resume r) throws IOException {
-//        try (FileOutputStream fos = new FileOutputStream(os);
         try (DataOutputStream dos = new DataOutputStream(os)) {
             writeString(dos, r.getUuid());
             writeString(dos, r.getFullName());
@@ -33,26 +30,37 @@ public class DataStreamFileStorage extends FileStorage {
             for (Map.Entry<SectionType, Section> entry : sections.entrySet()) {
                 SectionType type = entry.getKey();
                 Section section = entry.getValue();
-                writeString(dos, type.name());
+                dos.writeUTF(type.name());
                 switch (type) {
                     case OBJECTIVE:
-//                        writeString(dos, ((TextSection) section).getValue());
+                        dos.writeUTF(((TextSection) section).getValue());
                         break;
                     case ACHIEVEMENT:
-//                        writeString(dos, ((TextSection) section).getValue());
-                        break;
                     case QUALIFICATIONS:
-                        writeCollection(dos, ((MultiTextSection) section).getValues(), value -> writeString(dos, value));
+                        writeCollection(dos, ((MultiTextSection) section).getValues(), value -> dos.writeUTF(value));
                         break;
                     case EXPERIENCE:
-//                        writeString(dos, ((TextSection) section).getValue());
-                        break;
                     case EDUCATION:
-//                        writeString(dos, ((TextSection) section).getValue());
+                        writeCollection(dos, ((OrganizationSection) section).getValues(), (org) -> {
+                            dos.writeUTF(org.getLink().getName());
+                            dos.writeUTF(org.getLink().getUrl());
+                            writeCollection(dos, org.getPeriods(), (period) -> {
+                                writeLocalDate(dos, period.getStartDate());
+                                writeLocalDate(dos, period.getEndDate());
+                                dos.writeUTF(period.getPosition());
+                                dos.writeUTF(period.getContent());
+                            });
+                        });
                         break;
                 }
             }
         }
+    }
+
+    private void writeLocalDate(DataOutputStream dos, LocalDate ld) throws IOException {
+        Objects.requireNonNull(ld, "LocalDate can't be null, use Period.NOW");
+        dos.writeInt(ld.getYear());
+        dos.writeUTF(ld.getMonth().name());
     }
 
     @Override
@@ -78,11 +86,12 @@ public class DataStreamFileStorage extends FileStorage {
                         break;
                     case ACHIEVEMENT:
                     case QUALIFICATIONS:
-                        r.addSection(sectionType, new MultiTextSection(readList(dis, () -> readString(dis))));
+                        r.addSection(sectionType, new MultiTextSection(readList(dis, dis::readUTF)));
                         break;
                     case EXPERIENCE:
                     case EDUCATION:
-//                        writeString(dos, ((TextSection) section).getValue());
+                        r.addSection(sectionType, new OrganizationSection(readList(dis, () -> new Organization(new Link(dis.readUTF(), dis.readUTF()),
+                                readList(dis, () -> new Organization.Period(readLocalDate(dis), readLocalDate(dis)))))));
                         break;
                 }
             }
@@ -91,13 +100,17 @@ public class DataStreamFileStorage extends FileStorage {
         }
     }
 
+    private LocalDate readLocalDate(DataInputStream dis) throws IOException {
+        return LocalDate.of(dis.readInt(), Month.valueOf(dis.readUTF()), 1);
+    }
+
     private void writeString(DataOutputStream dos, String string) throws IOException {
-        dos.writeUTF(string == null ? NULL : string);
+        dos.writeUTF(string);
     }
 
     private String readString(DataInputStream dis) throws IOException {
         String str = dis.readUTF();
-        return str.equals(NULL) ? null : str;
+        return str;
     }
 
     private interface ElementWriter<T> {

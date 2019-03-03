@@ -13,8 +13,6 @@ import ru.javawebinar.webapp.model.SectionType;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public abstract class AbstractStorageTest {
@@ -32,23 +30,25 @@ public abstract class AbstractStorageTest {
 		R1 = new Resume("полное имя1", "location1");
 		R1.addContact(ContactType.MAIL, "erfg@dfg.com");
 		R1.addContact(ContactType.PHONE, "23453455");
-		R1.addObjective("Objective1");
-		R1.addMultiTextSection(SectionType.ACHIEVEMENT, "Achievement1", "Achievement2");
-		R1.addMultiTextSection(SectionType.QUALIFICATIONS, "Java", "SQL");
-		R1.addOrganizationSection(SectionType.EXPERIENCE,
-				new Organization("Organization11", null,
-						new Organization.Period(LocalDate.of(2005, Month.JANUARY, 1), Organization.Period.NOW, "position1", "content1"),
-						new Organization.Period(2001, Month.MARCH, 2005, Month.JANUARY, "position2", "content2")),
-				new Organization("Organization12", "www.com"));
-		R1.addOrganizationSection(SectionType.EDUCATION,
-				new Organization("Organization11", null,
-						new Organization.Period(2005, Month.JANUARY, 2000, Month.DECEMBER, "position1", null),
-						new Organization.Period(2001, Month.MARCH, 2005, Month.JANUARY, "position2", "content2")),
-				new Organization("Organization12", "www.com"));
-		R2 = new Resume("полное имя2", null);
+		if (storage.isSectionSupported()) {
+			R1.addObjective("Objective1");
+			R1.addMultiTextSection(SectionType.ACHIEVEMENT, "Achievement1", "Achievement2");
+			R1.addMultiTextSection(SectionType.QUALIFICATIONS, "Java", "SQL");
+			R1.addOrganizationSection(SectionType.EXPERIENCE,
+					new Organization("Organization11", "Org1",
+							new Organization.Period(LocalDate.of(2005, Month.JANUARY, 1), Organization.Period.NOW, "position1", "content1"),
+							new Organization.Period(2001, Month.MARCH, 2005, Month.JANUARY, "position2", "content2")),
+					new Organization("Organization12", "www.com"));
+			R1.addOrganizationSection(SectionType.EDUCATION,
+					new Organization("Organization11", "Org2",
+							new Organization.Period(2005, Month.JANUARY, 2000, Month.DECEMBER, "position1", null),
+							new Organization.Period(2001, Month.MARCH, 2005, Month.JANUARY, "position2", "content2")),
+					new Organization("Organization12", "www.com"));
+		}
+		R2 = new Resume("полное имя2", "location2");
 		R2.addContact(ContactType.MAIL, "eredrfgedfg@dfg.com");
 		R2.addContact(ContactType.PHONE, "2344564553455");
-		R3 = new Resume("полное имя3", null);
+		R3 = new Resume("полное имя3", "location3");
 		storage.clear();
 		storage.save(R1);
 		storage.save(R2);

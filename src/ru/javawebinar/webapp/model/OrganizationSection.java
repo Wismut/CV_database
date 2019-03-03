@@ -19,4 +19,12 @@ public class OrganizationSection extends Section implements Serializable {
     public OrganizationSection(Organization... organizations) {
         this.values = new LinkedList<>(Arrays.asList(organizations));
     }
+
+    public <T> OrganizationSection(List<T> readList) {
+        values = (List<Organization>) readList;
+    }
+
+    public List<Organization> getValues() {
+        return values;
+    }
 }

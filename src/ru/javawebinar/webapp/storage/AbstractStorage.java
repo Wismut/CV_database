@@ -82,4 +82,9 @@ public abstract class AbstractStorage<C> implements IStorage {
 
 	@Override
 	public abstract int size();
+
+	@Override
+	public boolean isSectionSupported() {
+		return true;
+	}
 }

@@ -24,4 +24,9 @@ public class JsonFileStorage extends FileStorage {
             return JsonParser.read(r, Resume.class);
         }
     }
+
+    @Override
+    public boolean isSectionSupported() {
+        return false;
+    }
 }
