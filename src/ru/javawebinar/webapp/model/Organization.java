@@ -1,7 +1,10 @@
 package ru.javawebinar.webapp.model;
 
+import ru.javawebinar.webapp.util.LocalDateAdapter;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.Month;
@@ -45,13 +48,30 @@ public class Organization implements Serializable {
 		this.periods = periods;
 	}
 
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Organization that = (Organization) o;
+		return Objects.equals(link, that.link) &&
+				Objects.equals(periods, that.periods);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(link, periods);
+	}
+
 	@XmlAccessorType(XmlAccessType.FIELD)
 	public static class Period implements Serializable {
 		static final long serialVersionUID = 1L;
 
 		public static final LocalDate NOW = LocalDate.of(3000, 1, 1);
 
+		@XmlJavaTypeAdapter(LocalDateAdapter.class)
 		private LocalDate startDate = NOW;
+
+		@XmlJavaTypeAdapter(LocalDateAdapter.class)
 		private LocalDate endDate;
 		private String position;
 		private String content = "";
@@ -106,6 +126,22 @@ public class Organization implements Serializable {
 
 		public void setContent(String content) {
 			this.content = content;
+		}
+
+		@Override
+		public boolean equals(Object o) {
+			if (this == o) return true;
+			if (o == null || getClass() != o.getClass()) return false;
+			Period period = (Period) o;
+			return Objects.equals(startDate, period.startDate) &&
+					Objects.equals(endDate, period.endDate) &&
+					Objects.equals(position, period.position) &&
+					Objects.equals(content, period.content);
+		}
+
+		@Override
+		public int hashCode() {
+			return Objects.hash(startDate, endDate, position, content);
 		}
 	}
 }
