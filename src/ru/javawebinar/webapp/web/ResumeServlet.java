@@ -14,7 +14,7 @@ public class ResumeServlet extends HttpServlet {
         resp.setContentType("text/html; charset=UTF-8");
         Writer w = resp.getWriter();
         String name = req.getParameter("name");
-        w.write("Тест сервлет: привет " + name);
+        w.write("Тест сервлет: " + name);
         w.close();
     }
 
