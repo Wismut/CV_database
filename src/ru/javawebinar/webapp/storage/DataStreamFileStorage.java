@@ -27,6 +27,7 @@ public class DataStreamFileStorage extends FileStorage {
             });
             Map<SectionType, Section> sections = r.getSections();
             dos.writeInt(sections.size());
+            System.out.println("Sections size " + sections.size());
             for (Map.Entry<SectionType, Section> entry : sections.entrySet()) {
                 SectionType type = entry.getKey();
                 Section section = entry.getValue();
@@ -78,6 +79,7 @@ public class DataStreamFileStorage extends FileStorage {
             }
             r.setContacts(contacts);
             final int sectionSize = dis.readInt();
+            System.out.println("section size read " + sectionSize);
             for (int i = 0; i < sectionSize; i++) {
                 SectionType sectionType = SectionType.valueOf(readString(dis));
                 switch (sectionType) {

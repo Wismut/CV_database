@@ -143,6 +143,10 @@ public class Resume implements Serializable {
 		this.uuid = uuid;
 	}
 
+	public void removeContact(ContactType type) {
+		contacts.remove(type);
+	}
+
 	@Override
 	public String toString() {
 		return "Resume{" +

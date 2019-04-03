@@ -1,23 +1,28 @@
 package ru.javawebinar.webapp.model;
 
-import java.io.Serializable;
+import ru.javawebinar.webapp.web.SectionHtmlType;
 
-public enum SectionType implements Serializable {
-	OBJECTIVE("Позиция"),
-	ACHIEVEMENT("Достижения"),
-	QUALIFICATIONS("Квалификация"),
-	EXPERIENCE("Опыт работы"),
-	EDUCATION("Образование");
 
-	static final long serialVersionUID = 1L;
+public enum SectionType {
+    OBJECTIVE("Позиция", SectionHtmlType.TEXT),
+    ACHIEVEMENT("Достижения", SectionHtmlType.MULTI_TEXT),
+    QUALIFICATIONS("Квалификация", SectionHtmlType.MULTI_TEXT),
+    EXPERIENCE("Опыт работы", SectionHtmlType.ORGANIZATION),
+    EDUCATION("Образование", SectionHtmlType.ORGANIZATION);
 
-	private String type;
+    private String title;
+    private SectionHtmlType htmlType;
 
-	SectionType(String type) {
-		this.type = type;
-	}
+    SectionType(String title, SectionHtmlType htmlType) {
+        this.title = title;
+        this.htmlType = htmlType;
+    }
 
-	public String getType() {
-		return type;
-	}
+    public SectionHtmlType getHtmlType() {
+        return htmlType;
+    }
+
+    public String getTitle() {
+        return title;
+    }
 }
