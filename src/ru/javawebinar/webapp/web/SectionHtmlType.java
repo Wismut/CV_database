@@ -23,7 +23,7 @@ public enum SectionHtmlType {
             return new TextSection(value);
         }
     },
-    MULTI_TEXT {
+    MULTITEXT {
         @Override
         public String toHtml(Section section, SectionType type) {
             return textArea(type.name(), section == null ? Collections.singletonList("") :((MultiTextSection) section).getValues());
@@ -37,7 +37,7 @@ public enum SectionHtmlType {
     ORGANIZATION {
         @Override
         public String toHtml(Section section, SectionType type) {
-            return section.toString();
+            return section == null ? "" : section.toString();
         }
 
         @Override

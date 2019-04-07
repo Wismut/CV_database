@@ -147,6 +147,10 @@ public class Resume implements Serializable {
 		contacts.remove(type);
 	}
 
+	public Section getSection(SectionType type) {
+		return sections.get(type);
+	}
+
 	@Override
 	public String toString() {
 		return "Resume{" +
