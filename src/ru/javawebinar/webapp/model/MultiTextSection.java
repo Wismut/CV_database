@@ -23,6 +23,7 @@ public class MultiTextSection extends Section {
     }
 
     public MultiTextSection() {
+
     }
 
     @Override
