@@ -5,7 +5,10 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
-import java.util.*;
+import java.util.EnumMap;
+import java.util.Map;
+import java.util.Objects;
+import java.util.UUID;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -32,6 +35,10 @@ public class Resume implements Serializable {
 		this(UUID.randomUUID().toString(), fullName, location);
 	}
 
+	public Resume(String uuid, String fullName, String location) {
+		this(uuid, fullName, location, "");
+	}
+
 	public Resume() {
 //		uuid = UUID.randomUUID().toString();
 	}
@@ -53,13 +60,15 @@ public class Resume implements Serializable {
 		return Objects.hash(uuid);
 	}
 
-	public Resume(String uuid, String fullName, String location) {
+	public Resume(String uuid, String fullName, String location, String homePage) {
 		Objects.requireNonNull(uuid, "uuid is null");
 		Objects.requireNonNull(fullName, "fullName is null");
 		Objects.requireNonNull(location, "location is null");
+		Objects.requireNonNull(homePage, "homepage is null");
 		this.uuid = uuid;
 		this.fullName = fullName;
 		this.location = location;
+		this.homePage = homePage;
 	}
 
 	public void addSection(SectionType type, Section section) {
