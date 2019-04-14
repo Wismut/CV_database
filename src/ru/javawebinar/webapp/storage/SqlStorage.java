@@ -4,7 +4,6 @@ import ru.javawebinar.webapp.WebAppException;
 import ru.javawebinar.webapp.model.Resume;
 import ru.javawebinar.webapp.sql.Sql;
 
-
 import java.sql.DriverManager;
 import java.util.Collection;
 
@@ -32,7 +31,9 @@ public class SqlStorage implements IStorage {
 
     @Override
     public Resume load(String uuid) {
-        return null;
+        return sql.execute("SELECT * FROM resume r WHERE r.uuid = ?", st -> {
+            return new Resume();
+        });
     }
 
     @Override
