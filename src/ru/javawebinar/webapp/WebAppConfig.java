@@ -2,7 +2,6 @@ package ru.javawebinar.webapp;
 
 import ru.javawebinar.webapp.storage.IStorage;
 import ru.javawebinar.webapp.storage.SqlStorage;
-import ru.javawebinar.webapp.storage.XmlFileStorage;
 
 import java.io.InputStream;
 import java.util.Properties;
@@ -30,10 +29,6 @@ public class WebAppConfig {
 
             Properties appProps = new Properties();
             appProps.load(webAppIs);
-            storage = new XmlFileStorage(appProps.getProperty("storage.dir"));
-//            appProps.getProperty("db.url");
-//            appProps.getProperty("db.user");
-//            appProps.getProperty("db.password");
             storage = new SqlStorage(
                     appProps.getProperty("db.url"),
                     appProps.getProperty("db.user"),

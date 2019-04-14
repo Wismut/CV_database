@@ -36,7 +36,16 @@ public class SqlStorage implements IStorage {
 
     @Override
     public void update(Resume r) {
-
+        sql.execute("UPDATE resume SET full_name = ?, location = ?, home_page = ? WHERE uuid = ?", st -> {
+            st.setString(1, r.getFullName());
+            st.setString(2, r.getLocation());
+            st.setString(3, r.getHomePage());
+            st.setString(4, r.getUuid());
+            if (st.executeUpdate() == 0) {
+                throw new WebAppException("Resume not found", r);
+            }
+            return null;
+        });
     }
 
     @Override
