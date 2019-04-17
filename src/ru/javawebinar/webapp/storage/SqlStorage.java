@@ -33,7 +33,7 @@ public class SqlStorage implements IStorage {
                 st.setString(4, r.getHomePage());
                 st.execute();
             }
-            replaceContact(conn, r);
+            insertContact(conn, r);
             return null;
         });
     }
@@ -50,25 +50,27 @@ public class SqlStorage implements IStorage {
                     throw new WebAppException("Resume not found", r);
                 }
             }
-            replaceContact(conn, r);
+            deleteContact(conn, r);
+            insertContact(conn, r);
             return null;
         });
     }
 
     @Override
     public Resume load(final String uuid) {
-        return sql.execute("SELECT * FROM resume r WHERE r.uuid = ?", st -> {
-            st.setString(1, uuid);
-            ResultSet rs = st.executeQuery();
-            if (!rs.next()) {
-                throw new WebAppException("Resume " + uuid + " is not exist");
-            }
-            Resume r = new Resume(uuid,
-                    rs.getString("full_name"),
-                    rs.getString("location"),
-                    rs.getString("home_page"));
-            return r;
-        });
+        return sql.execute("SELECT * FROM resume r LEFT JOIN contact c ON c.resume_uuid = r.uuid WHERE r.uuid = ?",
+                st -> {
+                    st.setString(1, uuid);
+                    ResultSet rs = st.executeQuery();
+                    if (!rs.next()) {
+                        throw new WebAppException("Resume " + uuid + " is not exist");
+                    }
+                    Resume r = new Resume(uuid,
+                            rs.getString("full_name"),
+                            rs.getString("location"),
+                            rs.getString("home_page"));
+                    return r;
+                });
     }
 
     @Override
@@ -112,12 +114,8 @@ public class SqlStorage implements IStorage {
         return false;
     }
 
-    private void replaceContact(Connection conn, Resume r) throws SQLException {
+    private void insertContact(Connection conn, Resume r) throws SQLException {
         String uuid = r.getUuid();
-        try (PreparedStatement st = conn.prepareStatement("DELETE FROM contact WHERE resume_uuid = ?")) {
-            st.setString(1, uuid);
-            st.execute();
-        }
         try (PreparedStatement st = conn.prepareStatement("INSERT INTO contact (resume_uuid, type, value) VALUES (?, ?, ?)")) {
             for (Map.Entry<ContactType, String> entry : r.getContacts().entrySet()) {
                 st.setString(1, uuid);
@@ -126,6 +124,13 @@ public class SqlStorage implements IStorage {
                 st.addBatch();
             }
             st.executeBatch();
+        }
+    }
+
+    private void deleteContact(Connection conn, Resume r) throws SQLException {
+        try (PreparedStatement st = conn.prepareStatement("DELETE FROM contact WHERE resume_uuid = ?")) {
+            st.setString(1, r.getUuid());
+            st.execute();
         }
     }
 }
