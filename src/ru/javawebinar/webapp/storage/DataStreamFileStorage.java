@@ -72,12 +72,10 @@ public class DataStreamFileStorage extends FileStorage {
             r.setFullName(readString(dis));
             r.setLocation(readString(dis));
             r.setHomePage(readString(dis));
-            Map<ContactType, String> contacts = new EnumMap<>(ContactType.class);
-            int size = dis.readInt();
-            for (int i = 0; i < size; i++) {
-                contacts.put(ContactType.VALUES[size], readString(dis));
+            int contactsSize = dis.readInt();
+            for (int i = 0; i < contactsSize; i++) {
+                r.addContact(ContactType.VALUES[dis.readInt()], dis.readUTF());
             }
-            r.setContacts(contacts);
             final int sectionSize = dis.readInt();
             System.out.println("section size read " + sectionSize);
             for (int i = 0; i < sectionSize; i++) {
@@ -93,7 +91,7 @@ public class DataStreamFileStorage extends FileStorage {
                     case EXPERIENCE:
                     case EDUCATION:
                         r.addSection(sectionType, new OrganizationSection(readList(dis, () -> new Organization(new Link(dis.readUTF(), dis.readUTF()),
-                                readList(dis, () -> new Organization.Period(readLocalDate(dis), readLocalDate(dis)))))));
+                                readList(dis, () -> new Organization.Period(readLocalDate(dis), readLocalDate(dis), dis.readUTF(), dis.readUTF()))))));
                         break;
                 }
             }

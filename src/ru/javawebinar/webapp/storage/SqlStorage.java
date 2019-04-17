@@ -4,11 +4,11 @@ import ru.javawebinar.webapp.WebAppException;
 import ru.javawebinar.webapp.model.ContactType;
 import ru.javawebinar.webapp.model.Resume;
 import ru.javawebinar.webapp.sql.Sql;
+import ru.javawebinar.webapp.util.Util;
 
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class SqlStorage implements IStorage {
@@ -69,8 +69,17 @@ public class SqlStorage implements IStorage {
                             rs.getString("full_name"),
                             rs.getString("location"),
                             rs.getString("home_page"));
+                    addContact(rs, r);
                     return r;
                 });
+    }
+
+    private void addContact(ResultSet rs, Resume r) throws SQLException {
+        String value = rs.getString("value");
+        if (!Util.isEmpty(value)) {
+            ContactType type = ContactType.valueOf(rs.getString("type"));
+            r.addContact(type, value);
+        }
     }
 
     @Override
@@ -86,17 +95,22 @@ public class SqlStorage implements IStorage {
 
     @Override
     public Collection<Resume> getAllSorted() {
-        return sql.execute("SELECT * FROM resume r ORDER BY full_name, uuid", st -> {
-            List<Resume> sortedResumes = new ArrayList<>();
+        return sql.execute("SELECT * FROM resume r LEFT JOIN contact c ON r.uuid = c.resume_uuid ORDER BY full_name, uuid", st -> {
+            Map<String, Resume> map = new LinkedHashMap<>();
             ResultSet rs = st.executeQuery();
             while (rs.next()) {
-                Resume r = new Resume(rs.getString("uuid"),
-                        rs.getString("full_name"),
-                        rs.getString("location"),
-                        rs.getString("home_page"));
-                sortedResumes.add(r);
+                String uuid = rs.getString("uuid");
+                Resume resume = map.get(uuid);
+                if (resume == null) {
+                    resume =  new Resume(rs.getString("uuid"),
+                            rs.getString("full_name"),
+                            rs.getString("location"),
+                            rs.getString("home_page"));
+                    map.put(uuid, resume);
+                }
+                addContact(rs, resume);
             }
-            return sortedResumes;
+            return map.values();
         });
     }
 

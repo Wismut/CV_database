@@ -12,7 +12,9 @@ import ru.javawebinar.webapp.model.SectionType;
 
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public abstract class AbstractStorageTest {
@@ -118,12 +120,8 @@ public abstract class AbstractStorageTest {
 	@org.junit.Test
 	public void getAllSorted() {
 		List<Resume> list = Arrays.asList(R1, R3, R2);
-		list.sort((o1, o2) -> {
-			int cmp = o1.getFullName().compareTo(o2.getFullName());
-			if (cmp != 0) return cmp;
-			return o1.getUuid().compareTo(o2.getUuid());
-		});
-		Assert.assertEquals(list, storage.getAllSorted());
+		list.sort(Comparator.comparing(Resume::getFullName).thenComparing(Resume::getUuid));
+		Assert.assertEquals(list, new ArrayList<>(storage.getAllSorted()));
 //		Resume[] resumes = new Resume[]{R1, R3, R2};
 //		Arrays.sort(resumes);
 //		Assert.assertTrue(Arrays.equals(resumes, storage.getAllSorted().toArray()));

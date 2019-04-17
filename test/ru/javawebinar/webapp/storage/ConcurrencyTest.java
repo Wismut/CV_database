@@ -1,5 +1,6 @@
 package ru.javawebinar.webapp.storage;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import ru.javawebinar.webapp.model.Resume;
 
@@ -7,7 +8,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.util.logging.LogManager;
 
-
+@Ignore
 public class ConcurrencyTest {
     static {
         try (FileInputStream logProps = new FileInputStream(new File("logging.properties"))) {
