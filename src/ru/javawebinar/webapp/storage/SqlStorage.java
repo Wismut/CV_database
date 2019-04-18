@@ -7,6 +7,7 @@ import ru.javawebinar.webapp.sql.Sql;
 import ru.javawebinar.webapp.util.Util;
 
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -102,7 +103,7 @@ public class SqlStorage implements IStorage {
                 String uuid = rs.getString("uuid");
                 Resume resume = map.get(uuid);
                 if (resume == null) {
-                    resume =  new Resume(rs.getString("uuid"),
+                    resume = new Resume(rs.getString("uuid"),
                             rs.getString("full_name"),
                             rs.getString("location"),
                             rs.getString("home_page"));
@@ -146,5 +147,15 @@ public class SqlStorage implements IStorage {
             st.setString(1, r.getUuid());
             st.execute();
         }
+    }
+
+    void insertDate(LocalDate now, LocalDate of) {
+        sql.execute("INSERT INTO period (start_date, end_date) VALUES (?, ?)",
+                st -> {
+                    st.setDate(1, java.sql.Date.valueOf(now));
+                    st.setDate(2, java.sql.Date.valueOf(of));
+                    st.execute();
+                    return null;
+                });
     }
 }
